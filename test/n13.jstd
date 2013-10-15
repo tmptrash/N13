@@ -1,0 +1,33 @@
+#
+# This is jsTestDriver server configuration file. It uses for WebStorm IDE server
+# and it's console version. For details about this file see documentation:
+# https://code.google.com/p/js-test-driver/
+#
+# This config tests n13 library
+#
+
+#
+# Here, we should keep all files, which should be included before test will be started
+#
+load:
+  - src/underscore.js
+  - src/backbone.js
+  - ../src/n13.js
+
+#
+# Here, we should add test suite files
+#
+test:
+  - src/n13.js
+
+#
+# This section is used for resources (images, jsons,...) and dynamically loaded files
+#
+serve:
+  - src/js/*.js
+  - src/js/mixin/*.js
+
+#
+# Server settings
+#
+server: http://localhost:4224

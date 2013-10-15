@@ -1,0 +1,7 @@
+How to run jstestdriver unit tests.
+
+
+user@machine: java -jar jstd.jar --port 4224
+user@machine: java -jar jstd.jar --config App.jstd --tests all --browser chromium-browser
+
+P.S. JsTestDriver is compatible with WebStrom IDE
