@@ -13,7 +13,7 @@ JavaScript Object Oriented Library. It supports:
  - dependencies loading
  - other libraries compatibility
  - simple utils
-===
+
 
 
 # Here is simple example of it:
