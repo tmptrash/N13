@@ -1,8 +1,3 @@
-//
-// TODO: Add mixed tests. For example: how config changes mixin methods and so on...
-// TODO: tests for ns, require methods
-//
-
 /**
  * This library emulates Object oriented features in JavaScript. It calls N13 and supports few important things.
  * Here they are:
@@ -34,7 +29,6 @@ window.udef = undefined;
 
 (function (global) {
     /**
-     * @private
      * {Object} _config              Configuration of N13 library. Is used in N13.init() method.
      * {Array}  _config.appRoot      Map of application name and application folder on server. e.g.:
      *
@@ -49,6 +43,7 @@ window.udef = undefined;
      * {String}  _config.baseUrl     URL of current html page without index file at the end. It
      *                               also contains slash at the end.
      *                               e.g: http://www.g.gl/do/index.html -> http://www.g.gl/do/
+     * @private
      */
     var _config = {
         appRoot    : ['App', 'js'],
@@ -69,10 +64,10 @@ window.udef = undefined;
         }())
     };
     /**
-     * @private
      * {Number} Amount of files, which are loading at the moment. Loading process should be started by N13.create()
      * function. This amount will be set into the amount of required files and will be decreased to zero. Zero means
      * that all dependencies has loaded and we can create full class.
+     * @private
      */
     var _fileLoading = 0;
     /**

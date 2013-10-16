@@ -13,6 +13,7 @@ load:
   - src/underscore.js
   - src/backbone.js
   - ../src/n13.js
+  - util/Common.js
 
 #
 # Here, we should add test suite files

@@ -16,7 +16,7 @@ JavaScript Object Oriented Library. It supports:
 
 
 
-# Here is simple example of it:
+## Here is an example of the View class, which is inherited from Backbone.View:
 
 ```javascript
 N13.define('App.View', {        // String namespace
@@ -37,4 +37,25 @@ N13.define('App.View', {        // String namespace
 var cl = new App.View({         // Instantiates class
     cfg: 'new value'            // Class configuration
 });
+```
+
+
+## Here is an example of multiple inheritance with mixin:
+
+```javascript
+N13.define('Mixin', {method: function () {return ' mixed';}});
+N13.define('Base',  {method: function () {return ' base'; }});
+
+N13.define('App.Class', {        // App.Class is a function
+    extend: 'Base',              // Parent class
+    mixins: {mix: 'Mixin'},      // List of mixins
+    method: function () {        // Overridden method
+        return 'Hello' +
+        this.callMixin('mix') +  // Calls method() from Base
+        this.callParent();       // Calls method() from Mixin
+    }
+});
+var cl = new App.Class();        // App.Class instantiation
+cl.method();                     // returns 'hello mixed base'
+
 ```

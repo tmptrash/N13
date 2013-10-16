@@ -1,10 +1,16 @@
 /*global App, EmptyParent, Child, Parent, Parent1, Parent2, Grandson, ChildOfChild */
 
+//
+// TODO: Add mixed tests. For example: how config changes mixin methods and so on...
+// TODO: tests for ns, require methods
+//
+
 /**
  * Shortcuts section
  */
 var isFunc  = N13.isFunction;
 var isObj   = N13.isObject;
+var isStr   = N13.isString;
 var emptyFn = N13.emptyFn;
 var define  = N13.define;
 var create  = N13.create;
@@ -448,7 +454,35 @@ AsyncTestCase("N13 library", {
             }));
             create('App.MClass2', callbacks.add(function () {
                 assertTrue('MClass1 should be created', ns('App.MClass1', false) !== false);
+
+                //
+                // Here we should remove created namespaces. Otherwise, this test will be crashed in future
+                //
+                delete window.App;
             }));
         });
+    },
+
+    /*
+     * Checks N13.isString() function with invalid values
+     */
+    testIsStringWithInvalidValue: function () {
+        Test.util.Common.mapValues(function (val) {
+            assertNoException('N13.isString shouldn\'t throw an exception', function () {
+                isStr(val);
+            });
+        });
+    },
+
+    /*
+     * Checks N13.isString() function with correct values
+     */
+    testIsStringWithCorrectValues: function () {
+        assertTrue('isString should return true for correct string', isStr('correct'));
+        assertTrue('isString should return true for empty string', isStr(''));
+        assertTrue('isString should return true for long string', isStr('correctalsdjkfljals;dj f;lasjdf; ljas;ldf;lasj;lj435o423uj 6034504305u[023u4 5u[3u45[ jasjf asdf jas;ljasl;jf ;asjd;f j;j ;jl;j5423 ;lj34;5 j;j2345l;j l;jl;sjdfl;jlasjdfljslajdfljsajl;fjal;sjjrf34854308508438508438v5g230gp5823048vb504328vb[084235v[08432vb$@#^&%^&*&%^*$^%&^$#%$#%TSDGDFYHTYHFGSDTGRYGDFGSDGERGHSTRFEWSR$TTYE%YTRHDFHDFHUERHDFGTRDTGRTYDTRHDFHDRTYHDER^%$^$#Y^%$Y%YWWEjsdtgrp;jio;sdtgjio;jio;sdghl;sdgrsdghil;dgpio[eyri[-09u0afghasfhsdgjrqat4whhhurio[tio[ewjquio[trawtyretio[reuutio[ewr4u3f5h9w-g7=f7twsgrd54w8f7ew89[w7hg89[w7gvwtj9[8gt9[gf8gs98js8j9tf-08vjd985478856i5riopu;yobmdujtio;8gj0nouhskf;askd ;fksd;kf;ksdl;fa;sdfk;g;dfk;ghkka;skfsdjaks;dkfsad;fk;;slajdf;lja;sldjfl;jal;sjgsdl;jl  lsajd l;asjd; lf;asjf90843060849304398608464306084305608340856 -0486 08456 408 60406804856080430860 80436057694=-5 84308 6-0834856-0860483 693046=-3906-340-6-43690437956730947694374304843 6408435443=643=6=46=4386=4396-43-69=3-496=-94356=-934=-956=-3496=-943=-96=-3496=-9436=-94=3-96=-4936=-3946=-'));
+        assertTrue('isString should return true for one symbol string', isStr('w'));
+        assertTrue('isString should return true for one symbol string', isStr('w'));
+        assertTrue('isString should return true for string with special symbols', isStr('!@#$%^&*()_+=-0987654321`~\|][p]{}:;\'".,/?'));
     }
 });
