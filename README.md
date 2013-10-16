@@ -31,12 +31,17 @@ N13.define('App.View', {        // String namespace
     requires: ['App.Class1'],   // Will be loaded first
     init    : function () {     // Constructor function
         this.callParent();      // Calls Backbone.View::init()
+        this.cl1 = new App.Class1();
     }
 });
 
-var cl = new App.View({         // Instantiates class
+var cl = new App.View({         // Instantiates class and calls init() method
     cfg: 'new value'            // Class configuration
 });
+cl.cfg;                         // contains 'new value'
+
+App.View.prop;                  // contains 'hello'
+App.View.func();                // returns 'hello'
 ```
 
 
