@@ -13,10 +13,10 @@ JavaScript Object Oriented Library. It supports:
  - dependencies loading
  - other libraries compatibility
  - simple utils
-
 ===
 
-Here is simple example of it:
+
+# Here is simple example of it:
 
 ```javascript
 N13.define('App.View', {        // String namespace
