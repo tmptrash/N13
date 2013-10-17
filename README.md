@@ -35,13 +35,14 @@ N13.define('App.View', {        // String namespace
     }
 });
 
+
 var cl = new App.View({         // Instantiates class and calls init() method
     cfg: 'new value'            // Class configuration
 });
-cl.cfg;                         // contains 'new value'
+cl.cfg;                         // Contains 'new value'
 
-App.View.prop;                  // contains 'hello'
-App.View.func();                // returns 'hello'
+App.View.prop;                  // Contains 'hello'
+App.View.func();                // Returns 'hello'
 ```
 
 
@@ -60,7 +61,9 @@ N13.define('App.Class', {        // App.Class is a function
         this.callParent();       // Calls method() from Mixin
     }
 });
+
+
 var cl = new App.Class();        // App.Class instantiation
-cl.method();                     // returns 'hello mixed base'
+cl.method();                     // Returns 'hello mixed base'
 
 ```

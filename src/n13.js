@@ -18,7 +18,7 @@
  * all dependencies asynchronously at the first time and just creates and return  the instance at second time.
  *
  * @author DeadbraiN
- * @email  deadbrainman@gmail.com
+ * @email  tmptrash@mail.ru
  */
 
 /**

@@ -9,6 +9,7 @@
  * Shortcuts section
  */
 var isFunc  = N13.isFunction;
+var isArr   = N13.isArray;
 var isObj   = N13.isObject;
 var isStr   = N13.isString;
 var emptyFn = N13.emptyFn;
@@ -464,14 +465,12 @@ AsyncTestCase("N13 library", {
     },
 
     /*
-     * Checks N13.isString() function with invalid values
+     * Checks N13.isString() function shouldn't throws an exception
      */
-    testIsStringWithInvalidValue: function () {
+    testIsStringWithInvalidValues: function () {
         Test.util.Common.mapValues(function (val) {
-            assertNoException('N13.isString shouldn\'t throw an exception', function () {
-                isStr(val);
-            });
-        });
+            assertFalse('N13.isString should return false on non string object', isStr(val));
+        }, ['emptyString', 'string', 'longString', 'specialString', 'capitalString']);
     },
 
     /*
@@ -483,6 +482,83 @@ AsyncTestCase("N13 library", {
         assertTrue('isString should return true for long string', isStr('correctalsdjkfljals;dj f;lasjdf; ljas;ldf;lasj;lj435o423uj 6034504305u[023u4 5u[3u45[ jasjf asdf jas;ljasl;jf ;asjd;f j;j ;jl;j5423 ;lj34;5 j;j2345l;j l;jl;sjdfl;jlasjdfljslajdfljsajl;fjal;sjjrf34854308508438508438v5g230gp5823048vb504328vb[084235v[08432vb$@#^&%^&*&%^*$^%&^$#%$#%TSDGDFYHTYHFGSDTGRYGDFGSDGERGHSTRFEWSR$TTYE%YTRHDFHDFHUERHDFGTRDTGRTYDTRHDFHDRTYHDER^%$^$#Y^%$Y%YWWEjsdtgrp;jio;sdtgjio;jio;sdghl;sdgrsdghil;dgpio[eyri[-09u0afghasfhsdgjrqat4whhhurio[tio[ewjquio[trawtyretio[reuutio[ewr4u3f5h9w-g7=f7twsgrd54w8f7ew89[w7hg89[w7gvwtj9[8gt9[gf8gs98js8j9tf-08vjd985478856i5riopu;yobmdujtio;8gj0nouhskf;askd ;fksd;kf;ksdl;fa;sdfk;g;dfk;ghkka;skfsdjaks;dkfsad;fk;;slajdf;lja;sldjfl;jal;sjgsdl;jl  lsajd l;asjd; lf;asjf90843060849304398608464306084305608340856 -0486 08456 408 60406804856080430860 80436057694=-5 84308 6-0834856-0860483 693046=-3906-340-6-43690437956730947694374304843 6408435443=643=6=46=4386=4396-43-69=3-496=-94356=-934=-956=-3496=-943=-96=-3496=-9436=-94=3-96=-4936=-3946=-'));
         assertTrue('isString should return true for one symbol string', isStr('w'));
         assertTrue('isString should return true for one symbol string', isStr('w'));
-        assertTrue('isString should return true for string with special symbols', isStr('!@#$%^&*()_+=-0987654321`~\|][p]{}:;\'".,/?'));
+        assertTrue('isString should return true for string with special symbols', isStr('!@#$%^&*()_+=-0987654321`~|][p]{}:;\'".,/?'));
+    },
+
+    /*
+     * Checks N13.isFunction() function shouldn't throws an exception
+     */
+    testIsFunctionWithInvalidValues: function () {
+        Test.util.Common.mapValues(function (val) {
+            assertFalse('N13.isFunction should return false on non function object', isFunc(val));
+        }, ['emptyFunction', 'simpleFunction']);
+    },
+
+    /*
+     * Checks N13.isFunction() function should return true for functions
+     */
+    testIsFunctionWithCorrectValues: function () {
+        assertTrue('N13.isFunction should return true on empty function object', isFunc(N13.emptyFn));
+        assertTrue('N13.isFunction should return true on simple function object', isFunc(function () {}));
+        assertTrue('N13.isFunction should return true on embedded function', isFunc(Array));
+        assertTrue('N13.isFunction should return true on embedded function', isFunc(Function));
+    },
+
+    /*
+     * Checks N13.isArray() function shouldn't throws an exception
+     */
+    testIsArrayWithInvalidValues: function () {
+        Test.util.Common.mapValues(function (val) {
+            assertFalse('N13.isArray should return false on non array object', isArr(val));
+        }, ['emptyArray', 'array']);
+    },
+
+    /*
+     * Checks N13.isArray() function should return true for arrays
+     */
+    testIsArrayWithCorrectValues: function () {
+        assertTrue('N13.isArray should return true on empty array', isArr([]));
+        assertTrue('N13.isArray should return true on simple array 1', isArr([1, 2, 3]));
+        assertTrue('N13.isArray should return true on simple array 2', isArr(new Array(1, 2, 3)));
+    },
+
+    /*
+     * Checks N13.isObject() function shouldn't throws an exception
+     */
+    testIsObjectWithInvalidValues: function () {
+        Test.util.Common.mapValues(function (val) {
+            assertFalse('N13.isObject should return false on non objects', isObj(val));
+        }, ['emptyObject', 'object', 'instance']);
+    },
+
+    /*
+     * Checks N13.isObject() function should return true for objects
+     */
+    testIsObjectWithCorrectValues: function () {
+        assertTrue('N13.isObject should return true on empty array', isObj({}));
+        assertTrue('N13.isObject should return true on simple array 1', isObj({a: 1, b: 2}));
+        assertTrue('N13.isObject should return true on simple array 2', isObj(new Object()));
+    },
+
+    /*
+     * Checks N13.ns() method
+     */
+    testNsWithInvalidValues: function () {
+        Test.util.Common.mapValues(function (val) {
+            assertNoException('N13.ns shouldn\'t throw an exception on invalid data', function () {ns(val);});
+        }, ['string', 'capitalString', 'longString', 'specialString']);
+    },
+
+    /*
+     * Checks N13.ns() method
+     */
+    testNsWithCorrectValues: function () {
+        delete window.IndefinedApp;
+        delete window.IndefinedApp1;
+        delete window.IndefinedApp2;
+
+        assertTrue('N13.ns should return false on undefined objects', isFunc(ns('UndefinedApp.UndefinedObj', true)));
+        assertFalse('N13.ns should return false on undefined objects', ns('UndefinedApp1.UndefinedObj1', false));
+        assertTrue('N13.ns should return false on undefined objects', isObj(ns('UndefinedApp2.UndefinedObj2')));
     }
 });
