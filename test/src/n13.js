@@ -287,6 +287,8 @@ AsyncTestCase("N13 library", {
         var p2;
         var ch1;
         var ch2;
+        var ch3;
+        var ch4;
 
         define('Parent', {
             configs: {
@@ -298,12 +300,21 @@ AsyncTestCase("N13 library", {
             extend : 'Parent',
             configs: {
                 cfg2: 'new 2'
-            }
+            },
+            method : function () {return 'original';}
+        });
+        define('Child1', {
+            configs: {
+                method: function () {return 'config';}
+            },
+            method : function () {return 'original';}
         });
         p1  = new Parent();
         p2  = new Parent({cfg1: 'new'});
         ch1 = new Child();
         ch2 = new Child({cfg1: 'new one', cfg2: 'cfg2'});
+        ch3 = new Child({method: function () {return 'config';}});
+        ch4 = new Child1();
 
         assertTrue('Parent class contains config properties',        p1.cfg1 === 1 && p1.cfg2 === 2);
         assertTrue('Parent class config override',                   p2.cfg1 === 'new' && p2.cfg2 === 2);
@@ -315,6 +326,9 @@ AsyncTestCase("N13 library", {
         assertTrue('Child class override config property',           ch1.cfg2 === 'new 2');
         assertTrue('Child class has config property from new',       ch2.cfg1 === 'new one');
         assertTrue('Child class overrides config property from new', ch2.cfg2 === 'cfg2');
+
+        assertTrue('Child class has method in config and this',      ch3.method() === 'config' && Child.prototype.method() === 'original');
+        assertTrue('Child1 class has method in config and this',     ch4.method() === 'original' && Child.prototype.method() === 'original' && ch4.configs.method() === 'config');
     },
 
     /*
@@ -546,6 +560,8 @@ AsyncTestCase("N13 library", {
     testNsWithInvalidValues: function () {
         Test.util.Common.mapValues(function (val) {
             assertNoException('N13.ns shouldn\'t throw an exception on invalid data', function () {ns(val);});
+            assertNoException('N13.ns shouldn\'t throw an exception on invalid data', function () {ns(val, true);});
+            assertNoException('N13.ns shouldn\'t throw an exception on invalid data', function () {ns(val, false);});
         }, ['string', 'capitalString', 'longString', 'specialString']);
     },
 
@@ -557,8 +573,15 @@ AsyncTestCase("N13 library", {
         delete window.IndefinedApp1;
         delete window.IndefinedApp2;
 
+        window.globalObject = {prop: 123};
         assertTrue('N13.ns should return false on undefined objects', isFunc(ns('UndefinedApp.UndefinedObj', true)));
         assertFalse('N13.ns should return false on undefined objects', ns('UndefinedApp1.UndefinedObj1', false));
         assertTrue('N13.ns should return false on undefined objects', isObj(ns('UndefinedApp2.UndefinedObj2')));
+        assertTrue('N13.ns should return existing object', ns('globalObject.prop') === 123);
+
+        delete window.IndefinedApp;
+        delete window.IndefinedApp1;
+        delete window.IndefinedApp2;
+        delete window.globalObject;
     }
 });
