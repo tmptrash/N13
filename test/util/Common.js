@@ -25,7 +25,7 @@ N13.define('Test.util.Common', {
             regexp        : /.+/,
             boolTrue      : true,
             boolFalse     : false,
-            udef          : udef,
+            udef          : undefined,
             nan           : NaN,
             infinity      : Infinity,
             minusInfinity : -Infinity,

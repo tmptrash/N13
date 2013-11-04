@@ -17,6 +17,7 @@ var define  = N13.define;
 var create  = N13.create;
 var init    = N13.init;
 var ns      = N13.ns;
+var udef    = undefined;
 
 /**
  * N13 library test suite. It was tuned for jsTestDriver framework and it has some special issues regarded

@@ -13,20 +13,13 @@
  * - other libraries compatibility
  * - simple utils
  *
- * The main functions, which do the job is N13.define and N13.create. It gets all the parameters and creates the class.
+ * The main functions, which do the job is N13.define. It gets all the parameters and creates the class.
  * See it's description for details. Second, important function is N13.create(). It creates a class instance and loads
  * all dependencies asynchronously at the first time and just creates and return  the instance at second time.
  *
  * @author DeadbraiN
  * @email  tmptrash@mail.ru
  */
-
-/**
- * @global
- * {undefined} Just a shortcut for undefined type
- */
-window.udef = undefined;
-
 (function (global) {
     /**
      * {Object} _config              Configuration of N13 library. Is used in N13.init() method.
@@ -189,7 +182,7 @@ window.udef = undefined;
 
     /**
      * Calls before N13.create() calls. It starts the loading timer checker
-     * @param {Function|udef} cb Callback function, which will be called when all dependencies will be loaded
+     * @param {Function|undefined} cb Callback function, which will be called when all dependencies will be loaded
      * @param {Object} scope Scope for callback
      * @private
      */
@@ -372,7 +365,7 @@ window.udef = undefined;
          *     });
          *
          * @param {String|Array} classes Class name or names array. e.g.: 'App.Class' or ['App.view.Widget', 'App.model.Person']
-         * @param {Function|udef} callback Will be called after file will load
+         * @param {Function|undefined} callback Will be called after file will load
          * @param {Object} scope Scope for callback function
          */
         require: require = function require(cl, callback, scope) {
@@ -394,7 +387,7 @@ window.udef = undefined;
          * then this method will return this function: App.view.Widget // N13.isFunction(App.view.Widget) === true
          * @param {String|Function} namespace
          * @param {Boolean} createFn If true, then creates empty function at the end of namespace, false -
-         * doesn't create an empty object at the end, udef - creates empty object at the end.
+         * doesn't create an empty object at the end, undefined - creates empty object at the end.
          * @return {Object|Function|Boolean} false if namespace wasn't created before and createFn === false,
          * Function if createFn === true, Object if createFn was undefined.
          */
@@ -419,7 +412,7 @@ window.udef = undefined;
             }
             for (i = 0, len = nsArr.length, lenButOne = len - 1; i < len; i++) {
                 item = nsArr[i];
-                if (obj[item] === udef || i === lenButOne) {
+                if (obj[item] === undefined || i === lenButOne) {
                     if (createFn && i === lenButOne) {
                         //
                         // We must create new function every time. We shouldn't use N13.emptyFn.
@@ -427,7 +420,7 @@ window.udef = undefined;
                         //noinspection JSHint
                         obj[item] = function emptyClass() {};
                     } else {
-                        if (obj[item] === udef) {
+                        if (obj[item] === undefined) {
                             if (createFn === false) {
                                 return false;
                             }
@@ -696,10 +689,10 @@ window.udef = undefined;
          *     cl1.prop;     // 'newProp'
          *     cl1.method(); // undefined
          *
-         * @param {String|Function|udef} child        Name of the child class or it's function
-         * @param {Object|udef}          props        Class configuration. A map of properties and methods of this class.
-         * @param {Object}               props.mixins Map of mixins in format {shortName: <Class-name>,...}
-         * @return {Function|udef} Function if parent class was already loaded, udef if not
+         * @param {String|Function|undefined} child        Name of the child class or it's function
+         * @param {Object|undefined}          props        Class configuration. A map of properties and methods of this class.
+         * @param {Object}                    props.mixins Map of mixins in format {shortName: <Class-name>,...}
+         * @return {Function|undefined} Function if parent class was already loaded, undefined if not
          */
         define: function define(child, props) {
             props          = props || {};
@@ -731,7 +724,7 @@ window.udef = undefined;
                  * @return {Object} Class instance
                  */
                 var childConstructor = function childConstructor(config) {
-                    var ctor = properties.hasOwnProperty('init') ? properties.init : udef;
+                    var ctor = properties.hasOwnProperty('init') ? properties.init : undefined;
                     var c;
                     var cfg;
 
@@ -783,7 +776,7 @@ window.udef = undefined;
                 childProto.childNs                     = oldProto.childNs;
                 childProto.applyProps                  = oldProto.applyProps;
                 childProto.inherit                     = oldProto.inherit;
-                childProto.parent                      = oldProto.parent || udef;
+                childProto.parent                      = oldProto.parent || undefined;
 
                 return childConstructor;
             }
@@ -823,7 +816,7 @@ window.udef = undefined;
                     for (s in statics) {
                         if (statics.hasOwnProperty(s)) {
                             stat = statics[s];
-                            if (cl[s] === udef) {
+                            if (cl[s] === undefined) {
                                 if (isFunction(stat)) {
                                     //
                                     // Name of the property, where we store current function name. It will be used in
@@ -888,7 +881,7 @@ window.udef = undefined;
                                     //
                                     // We should copy mixed method, only in case when main class doesn't have it
                                     //
-                                    if (!clProto.hasOwnProperty(m) && properties[m] === udef && m !== 'init') {
+                                    if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init') {
                                         mixin = mixinProto[m];
                                         if (isFunction(mixin)) {
                                             //
@@ -1049,8 +1042,8 @@ window.udef = undefined;
                  *
                  *   var ch = new App.Child(); //Child\nParent
                  *
-                 * @param {Array} args Array of arguments
-                 * @return {Object|udef} Depends on parent method
+                 * @param {Array=} args Array of arguments
+                 * @return {Object|undefined} Depends on parent method
                  */
                 child.prototype.callParent = function callParent(args) {
                     //noinspection JSHint
@@ -1068,7 +1061,7 @@ window.udef = undefined;
                         }
                     }
 
-                    return udef;
+                    return undefined;
                 };
 
                 /**
@@ -1088,9 +1081,9 @@ window.udef = undefined;
                  *   var cl = new App.Class(); // Child\nMixin
                  *
                  * @param {String} mixin Name of the mixin's shortcut
-                 * @param {String|udef|Array} method Name of the method within mixin class. udef if call
+                 * @param {String|undefined|Array} method Name of the method within mixin class. undefined if call
                  * the same method. Array if call the same method with this array as arguments.
-                 * @param {Array|udef} args Array of arguments or udef if no arguments
+                 * @param {Array|undefined} args Array of arguments or undefined if no arguments
                  * @return {Object} method related value
                  */
                 child.prototype.callMixin = function callMixin(mixin, method, args) {
@@ -1156,12 +1149,12 @@ window.udef = undefined;
             childProto.childNs    = childNs;
             childProto.applyProps = applyProperties;
             childProto.inherit    = inherit;
-            childProto.parent     = parent || udef;
+            childProto.parent     = parent || undefined;
 
             //
             // Create requires array. It contains requires, mixins and parent classes
             //
-            addRequires(child, isString(parent) ? parent : udef);
+            addRequires(child, isString(parent) ? parent : undefined);
             addRequires(child, props.mixins);
             addRequires(child, props.requires);
 
@@ -1237,10 +1230,10 @@ window.udef = undefined;
          * any ordering here.
          *
          * @param {String} cl Name of the class
-         * @param {Function|udef} finalCb Callback function to call
+         * @param {Function|undefined} finalCb Callback function to call
          * @param {Object} scope Scope for callback function
-         * @param {Object|udef} cfg Configuration of the instance. It will be passed as a parameter into the new operator
-         * @param {Function|udef} beforeCb Calls before class will be created
+         * @param {Object|undefined} cfg Configuration of the instance. It will be passed as a parameter into the new operator
+         * @param {Function|undefined} beforeCb Calls before class will be created
          * @return {Boolean|Object} false if class will be loaded asynchronously, instance - if all required classes have already loaded
          */
         create: create = function (cl, finalCb, scope, cfg, beforeCb) {
@@ -1319,7 +1312,7 @@ window.udef = undefined;
                 // because this library doesn't support loading of two or more classes at the same time.
                 //
                 if (_createStack.length) {
-                    create.apply(udef, _createStack.pop());
+                    create.apply(undefined, _createStack.pop());
                 }
             });
 
