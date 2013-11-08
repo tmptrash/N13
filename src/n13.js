@@ -1124,6 +1124,26 @@
                 }
             }
 
+            /**
+             * @private
+             * Sets special configuration to the current instance. Fro example:
+             *
+             *     obj.setConfig({cfg1: 1, cfg2: 2});
+             *
+             * This example shows how to set two arguments into the obj. After this line
+             * obj will contain these two parameters with appropriate values (1,2)
+             * @param {Object} cfg Key value object to set
+             */
+            function setConfig(cfg) {
+                var i;
+
+                for (i in this) {
+                    if (this.hasOwnProperty(i)) {
+                        this[i] = cfg[i];
+                    }
+                }
+            }
+
 
             //
             // Obtain class from it's name
@@ -1143,6 +1163,7 @@
             //
             childProto            = child.prototype;
             childProto.className  = childCl;
+            childProto.setConfig  = childProto.setConfig && setConfig || undefined;
             childProto.requires   = [];
             childProto.props      = props;
             childProto.childStr   = childStr;
