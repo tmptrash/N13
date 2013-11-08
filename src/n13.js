@@ -1139,7 +1139,7 @@
                 var i;
 
                 for (i in cfg) {
-                    if (cfg.hasOwnProperty(i) && this.hasOwnProperty(i)) {
+                    if (cfg.hasOwnProperty(i) && this[i] !== undefined) {
                         this[i] = cfg[i];
                     }
                 }
