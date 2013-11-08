@@ -1163,7 +1163,7 @@
             //
             childProto            = child.prototype;
             childProto.className  = childCl;
-            childProto.setConfig  = childProto.setConfig && setConfig || undefined;
+            childProto.setConfig  = childProto.setConfig || setConfig || undefined;
             childProto.requires   = [];
             childProto.props      = props;
             childProto.childStr   = childStr;
