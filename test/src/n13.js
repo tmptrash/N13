@@ -2,7 +2,7 @@
 
 //
 // TODO: Add mixed tests. For example: how config changes mixin methods and so on...
-// TODO: tests for ns, require methods
+// TODO: tests for ns and require methods
 //
 
 /**
