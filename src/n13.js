@@ -770,6 +770,7 @@
                 // that inheritance and dependency loading will be started on N13.create() and not in N13.define().
                 //
                 childProto.className                   = oldProto.className;
+                childProto.setConfig                   = oldProto.setConfig;
                 childProto.requires                    = oldProto.requires;
                 childProto.props                       = oldProto.props;
                 childProto.childStr                    = oldProto.childStr;
