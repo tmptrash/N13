@@ -17,7 +17,7 @@ var define  = N13.define;
 var create  = N13.create;
 var init    = N13.init;
 var ns      = N13.ns;
-var udef    = undefined;
+var undefined    = undefined;
 
 /**
  * N13 library test suite. It was tuned for jsTestDriver framework and it has some special issues regarded
@@ -114,7 +114,7 @@ AsyncTestCase("N13 library", {
         child.parentProp = 'new parentProp value';
         child.childProp  = 'new childProp value';
         assertTrue('Child and Parent classes must be separated 1', child.parentProp !== parent.parentProp);
-        assertTrue('Child and Parent classes must be separated 2', child.childProp !== parent.childProp && parent.childProp === udef);
+        assertTrue('Child and Parent classes must be separated 2', child.childProp !== parent.childProp && parent.childProp === undefined);
         assertTrue('Child should have extends property',           child.extend === 'Parent');
         assertTrue('Child instance has correct self property',     child.self === Child);
         assertTrue('Child has correct base property',              Child.base === Parent.prototype);
@@ -122,7 +122,7 @@ AsyncTestCase("N13 library", {
         assertTrue('Child has correct requires',                   Child.prototype.requires === child.requires && child.requires.length === 1 && child.requires[0] === 'Parent');
         assertTrue('Child has correct parent',                     child.parent === 'Parent');
         assertTrue('Parent constructor shouldn\'t be broken',      parent.constructor === Parent && Parent.prototype.constructor === Parent && parent instanceof Parent);
-        assertTrue('Parent shouldn\'t has extends property',       parent.extend === udef);
+        assertTrue('Parent shouldn\'t has extends property',       parent.extend === undefined);
         assertTrue('Parent instance has correct self property',    parent.self === Parent);
         assertTrue('Parent has correct base property',             Parent.base !== Child.base);
         assertTrue('Parent has correct class name',                Parent.prototype.className === 'Parent' && parent.className === 'Parent');
@@ -180,8 +180,8 @@ AsyncTestCase("N13 library", {
         grand.childProp  = 'new childProp value';
         grand.grandProp  = 'new grandProp value';
         assertTrue('All classes must be separated 1',              grand.parentProp !== child.parentProp && child.parentProp === parent.parentProp);
-        assertTrue('All classes must be separated 2',              grand.childProp !== child.childProp && parent.childProp === udef);
-        assertTrue('All classes must be separated 3',              grand.grandProp !== child.grandProp && child.grandProp === udef && parent.grandProp === udef);
+        assertTrue('All classes must be separated 2',              grand.childProp !== child.childProp && parent.childProp === undefined);
+        assertTrue('All classes must be separated 3',              grand.grandProp !== child.grandProp && child.grandProp === undefined && parent.grandProp === undefined);
 
         assertTrue('Grandson constructor shouldn\'t be broken',    grand.constructor === Grandson && Grandson.prototype.constructor === Grandson);
         assertTrue('Child constructor shouldn\'t be broken',       child.constructor === Child && Child.prototype.constructor === Child);
@@ -234,7 +234,7 @@ AsyncTestCase("N13 library", {
         parent = new Parent();
         child  = new Child();
 
-        assertTrue('Parent class has a mixin',           parent.mixins !== udef && parent.mixins.mix !== udef);
+        assertTrue('Parent class has a mixin',           parent.mixins !== undefined && parent.mixins.mix !== undefined);
         assertTrue('Parent class has mixin method',      isFunc(parent.mixinMethod) && parent.mixinMethod() === 'mixin method');
         assertTrue('Parent class has own method',        isFunc(parent.method) && parent.method() === 'parent');
         assertTrue('Parent class has mixin property',    parent.mixinProp === 'mixin');
@@ -319,7 +319,7 @@ AsyncTestCase("N13 library", {
 
         assertTrue('Parent class contains config properties',        p1.cfg1 === 1 && p1.cfg2 === 2);
         assertTrue('Parent class config override',                   p2.cfg1 === 'new' && p2.cfg2 === 2);
-        assertTrue('Parent class hasn\'t static for config',         Parent.cfg1 === udef && Parent.cfg2 === udef);
+        assertTrue('Parent class hasn\'t static for config',         Parent.cfg1 === undefined && Parent.cfg2 === undefined);
         assertTrue('Parent class has config in prototype',           Parent.prototype.cfg1 === 1 && Parent.prototype.cfg2 === 2);
         assertTrue('Parent class has no config in instance',         p1.hasOwnProperty('cfg1') === false && p1.hasOwnProperty('cfg2') === false);
 
