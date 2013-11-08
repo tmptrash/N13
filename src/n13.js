@@ -1138,8 +1138,8 @@
             function setConfig(cfg) {
                 var i;
 
-                for (i in this) {
-                    if (this.hasOwnProperty(i)) {
+                for (i in cfg) {
+                    if (cfg.hasOwnProperty(i) && this.hasOwnProperty(i)) {
                         this[i] = cfg[i];
                     }
                 }
