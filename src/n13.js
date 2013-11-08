@@ -690,8 +690,7 @@
          *     cl1.method(); // undefined
          *
          * @param {String|Function|undefined} child        Name of the child class or it's function
-         * @param {Object|undefined}          props        Class configuration. A map of properties and methods of this class.
-         * @param {Object}                    props.mixins Map of mixins in format {shortName: <Class-name>,...}
+         * @param {Object|undefined=}         props        Class configuration. A map of properties and methods of this class.
          * @return {Function|undefined} Function if parent class was already loaded, undefined if not
          */
         define: function define(child, props) {
@@ -1134,20 +1133,27 @@
              * This example shows how to set two arguments into the obj. After this line
              * obj will contain these two parameters with appropriate values (1,2)
              * @param {Object} cfg Key value object to set
+             * @return {Boolean} true if configuration was set successfully, false - otherwise
              */
             function setConfig(cfg) {
                 var i;
+
+                if (!isObject(cfg)) {
+                    return false;
+                }
 
                 for (i in cfg) {
                     if (cfg.hasOwnProperty(i) && this[i] !== undefined) {
                         this[i] = cfg[i];
                     }
                 }
+
+                return true;
             }
 
 
             //
-            // Obtain class from it's name
+            // Obtains class from it's name
             //
             child = ns(childNs, true);
 
