@@ -17,7 +17,6 @@ var define  = N13.define;
 var create  = N13.create;
 var init    = N13.init;
 var ns      = N13.ns;
-var undefined    = undefined;
 
 /**
  * N13 library test suite. It was tuned for jsTestDriver framework and it has some special issues regarded
@@ -584,5 +583,50 @@ AsyncTestCase("N13 library", {
         delete window.IndefinedApp1;
         delete window.IndefinedApp2;
         delete window.globalObject;
+    },
+
+    /*
+     * Checks setConfig() method for invalid values. It should return false every time
+     */
+    testSetConfigWithIncorrectValues: function () {
+        var base;
+
+        N13.define('Base');
+        base = new Base();
+
+        Test.util.Common.mapValues(function (val) {
+            assertFalse('N13.setConfig() should return false on non objects', base.setConfig(val));
+        }, ['emptyObject', 'object', 'instance']);
+    },
+
+    /*
+     * Checks classes setConfig() method
+     */
+    testSetConfig: function () {
+        var base;
+        var child;
+
+        N13.define('Base', {
+            configs: {
+                cfg1: 1,
+                cfg2: 2
+            }
+        });
+        N13.define('Child', {
+            extend : 'Base',
+            configs: {
+                cfg3: 3,
+                cfg4: 4
+            }
+        });
+
+        base  = new Base();
+        child = new Child();
+
+        assertTrue('setConfig() shouldn\'t set an unknown property',     base.setConfig({unk: 123}) && base.unk === undefined && base.cfg1 === 1 && base.cfg2 === 2);
+        assertTrue('setConfig() should set valid value 1',               base.setConfig({cfg1: 123}) && base.cfg1 === 123 && base.cfg2 === 2);
+        assertTrue('setConfig() should set valid value 2',               base.setConfig({cfg1: 124, cfg3: 3}) && base.cfg1 === 124 && base.cfg3 === undefined);
+        assertTrue('setConfig() should set valid value from in class 1', child.setConfig({cfg3: 23}) && child.cfg3 === 23 && child.cfg4 === 4);
+        assertTrue('setConfig() should set valid value from in class 2', child.setConfig({cfg3: 23, cfg1: 11}) && child.cfg3 === 23 && child.cfg1 === 11);
     }
 });
