@@ -1082,9 +1082,9 @@
                  *   var cl = new App.Class(); // Child\nMixin
                  *
                  * @param {String} mixin Name of the mixin's shortcut
-                 * @param {String|undefined|Array} method Name of the method within mixin class. undefined if call
+                 * @param {String|Array=} method Name of the method within mixin class. undefined if call
                  * the same method. Array if call the same method with this array as arguments.
-                 * @param {Array|undefined} args Array of arguments or undefined if no arguments
+                 * @param {Array=} args Array of arguments or undefined if no arguments
                  * @return {Object} method related value
                  */
                 child.prototype.callMixin = function callMixin(mixin, method, args) {
@@ -1132,7 +1132,7 @@
              *     obj.setConfig({cfg1: 1, cfg2: 2});
              *
              * This example shows how to set two arguments into the obj. After this line
-             * obj will contain these two parameters with appropriate values (1,2)
+             * obj will contain these two parameters with appropriate values (1,2).
              * @param {Object} cfg Key value object to set
              */
             function setConfig(cfg) {
