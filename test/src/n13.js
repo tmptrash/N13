@@ -213,7 +213,8 @@ AsyncTestCase("N13 library", {
             mixinMethod1: function () {return this.callParent();},
             mixinMethod2: function () {return this.callParent();},
             mixinMethod3: function () {return this.callParent();},
-            mixinMethod4: function () {return this.callParent();}
+            mixinMethod4: function () {return this.callParent();},
+            destroy     : function () {}
         });
         define('Parent', {
             mixins      : {mix: 'Mixin'},
@@ -233,17 +234,18 @@ AsyncTestCase("N13 library", {
         parent = new Parent();
         child  = new Child();
 
-        assertTrue('Parent class has a mixin',           parent.mixins !== undefined && parent.mixins.mix !== undefined);
-        assertTrue('Parent class has mixin method',      isFunc(parent.mixinMethod) && parent.mixinMethod() === 'mixin method');
-        assertTrue('Parent class has own method',        isFunc(parent.method) && parent.method() === 'parent');
-        assertTrue('Parent class has mixin property',    parent.mixinProp === 'mixin');
-        assertTrue('Parent class has own property',      parent.prop === 'parent');
-        assertTrue('Parent class can access mixin',      isFunc(parent.mixins.mix.method) && parent.mixins.mix.method() === 'mixin');
-        assertTrue('callMixin() method works correctly', parent.mixinMethod1() === 'parent mixin method');
-        assertTrue('Mixins hierarchy calls 1',           child.mixinMethod1() === 'parent mixin method');
-        assertTrue('Mixins hierarchy calls 2',           child.mixinMethod2() === 'mixin');
-        assertTrue('Mixins hierarchy calls 3',           child.mixinMethod3() === 'mixin');
-        assertTrue('Mixins hierarchy calls 4',           child.mixinMethod4() === 'parent');
+        assertTrue('Parent class has a mixin',              parent.mixins !== undefined && parent.mixins.mix !== undefined);
+        assertTrue('Parent class has mixin method',         isFunc(parent.mixinMethod) && parent.mixinMethod() === 'mixin method');
+        assertTrue('Parent class has own method',           isFunc(parent.method) && parent.method() === 'parent');
+        assertTrue('Parent class has mixin property',       parent.mixinProp === 'mixin');
+        assertTrue('Parent class has own property',         parent.prop === 'parent');
+        assertTrue('Parent class can access mixin',         isFunc(parent.mixins.mix.method) && parent.mixins.mix.method() === 'mixin');
+        assertTrue('callMixin() method works correctly',    parent.mixinMethod1() === 'parent mixin method');
+        assertTrue('Mixins hierarchy calls 1',              child.mixinMethod1() === 'parent mixin method');
+        assertTrue('Mixins hierarchy calls 2',              child.mixinMethod2() === 'mixin');
+        assertTrue('Mixins hierarchy calls 3',              child.mixinMethod3() === 'mixin');
+        assertTrue('Mixins hierarchy calls 4',              child.mixinMethod4() === 'parent');
+        assertTrue('Mixins should not copy destroy method', !child.hasOwnProperty('destroy') && !Child.prototype.hasOwnProperty('destroy'));
     },
 
     /*
