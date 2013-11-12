@@ -836,7 +836,9 @@
                  * @private
                  * Mixin classes handler. Adds methods/properties from mixins to the class function. Analog of
                  * mixins in other OOP languages. If some methods/properties are already exist, then they
-                 * will be skipped. Example:
+                 * will be skipped. Very important moment here is that All methods will be copied, except init()
+                 * and destroy(). These methods should be called using callMixin() method or manually, using
+                 * self or class function (Class.prototype.destroy.apply(this, [args])) Example:
                  *
                  *     N13.define('Mixin', {
                  *         mixMethod: function () {return this.mix;},
@@ -881,7 +883,7 @@
                                     //
                                     // We should copy mixed method, only in case when main class doesn't contain them
                                     //
-                                    if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init') {
+                                    if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init' && m !== 'destroy') {
                                         mixin = mixinProto[m];
                                         if (isFunction(mixin)) {
                                             //
