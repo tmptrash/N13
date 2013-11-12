@@ -879,7 +879,7 @@
                             for (m in mixinProto) {
                                 if (mixinProto.hasOwnProperty(m)) {
                                     //
-                                    // We should copy mixed method, only in case when main class doesn't have it
+                                    // We should copy mixed method, only in case when main class doesn't contain them
                                     //
                                     if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init') {
                                         mixin = mixinProto[m];
