@@ -1017,7 +1017,7 @@
              * @return {Function} Updated child class
              */
             function inherit(parent, childNs, childStr) {
-                if (parent === false) {
+                if (isString(parent)) {
                     parent = ns(parent, false);
                     if (parent === false) {
                         throw Error('Child class (' + childNs + '.' + childStr + ') has undefined parent (' + parent + ') class.');
