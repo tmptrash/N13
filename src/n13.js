@@ -1017,10 +1017,13 @@
              * @return {Function} Updated child class
              */
             function inherit(parent, childNs, childStr) {
+                var parentName;
+
                 if (isString(parent)) {
-                    parent = ns(parent, false);
+                    parentName = parent;
+                    parent     = ns(parent, false);
                     if (parent === false) {
-                        throw Error('Child class (' + childNs + '.' + childStr + ') has undefined parent (' + parent + ') class.');
+                        throw Error('Child class (' + (childNs ? childNs + '.' : '') + childStr + ') has undefined parent (' + parentName + ') class.');
                     }
                 }
 
