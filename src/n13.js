@@ -1018,7 +1018,10 @@
              */
             function inherit(parent, childNs, childStr) {
                 if (parent === false) {
-                    parent = ns(parent);
+                    parent = ns(parent, false);
+                    if (parent === false) {
+                        throw Error('Child class (' + childNs + '.' + childStr + ') has undefined parent (' + parent + ') class.');
+                    }
                 }
 
                 //
@@ -1202,7 +1205,7 @@
             // also means that, all dependencies have already loaded before current N13.define() call.
             //
             } else {
-                child = inherit(isString(parent) ? ns(parent) : parent, childNs, childStr);
+                child = inherit(parent, childNs, childStr);
                 applyProperties(child, props);
             }
 
