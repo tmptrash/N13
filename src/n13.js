@@ -868,6 +868,8 @@
                     var mixin;
                     var mixinCl;
                     var mixinBase;
+                    var configs;
+                    var cfg;
 
                     for (i in mixins) {
                         if (mixins.hasOwnProperty(i)) {
@@ -880,11 +882,29 @@
 
                             for (m in mixinProto) {
                                 if (mixinProto.hasOwnProperty(m)) {
+                                    mixin = mixinProto[m];
+
                                     //
-                                    // We should copy mixed method, only in case when main class doesn't contain them
+                                    // It's possible to apply configuration from mixin. If main class doesn't
+                                    // contain properties, which mixin does, then they may be copied into main one
                                     //
-                                    if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init' && m !== 'destroy') {
-                                        mixin = mixinProto[m];
+                                    if (m === 'configs') {
+                                        configs = properties.configs = properties.configs || {};
+                                        //
+                                        // Walks through config properties and apply only unique for main class
+                                        //
+                                        for (cfg in mixin) {
+                                            //
+                                            // Applies config only if main class doesn't contain same config
+                                            //
+                                            if (mixin.hasOwnProperty(cfg) && configs[cfg] === undefined) {
+                                                configs[cfg] = mixin[cfg];
+                                            }
+                                        }
+                                        //
+                                        // We should copy mixed method, only in case when main class doesn't contain them
+                                        //
+                                    } else if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init' && m !== 'destroy') {
                                         if (isFunction(mixin)) {
                                             //
                                             // Name of the property, where we store current function name. It will be used in
