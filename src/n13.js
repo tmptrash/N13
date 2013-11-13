@@ -1023,7 +1023,7 @@
                     parentName = parent;
                     parent     = ns(parent, false);
                     if (parent === false) {
-                        throw Error('Child class (' + (childNs ? childNs + '.' : '') + childStr + ') has undefined parent (' + parentName + ') class.');
+                        throw Error('Child class (' + (childNs ? childNs + '.' : '') + childStr + ') has undefined parent class (' + parentName + ').');
                     }
                 }
 
