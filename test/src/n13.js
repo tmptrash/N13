@@ -210,6 +210,7 @@ AsyncTestCase("N13 library", {
         });
         define('ChildMixin', {
             extend      : 'Mixin',
+            configs     : {cfg1: '1mix', cfg2: '2mix'},
             mixinMethod1: function () {return this.callParent();},
             mixinMethod2: function () {return this.callParent();},
             mixinMethod3: function () {return this.callParent();},
@@ -228,6 +229,7 @@ AsyncTestCase("N13 library", {
         define('Child', {
             extend      : 'Parent',
             mixins      : {mix: 'ChildMixin'},
+            configs     : {cfg1: '1child'},
             mixinMethod1: function () {return this.callParent();},
             mixinMethod2: function () {return this.callMixin('mix');}
         });
@@ -246,6 +248,7 @@ AsyncTestCase("N13 library", {
         assertTrue('Mixins hierarchy calls 3',              child.mixinMethod3() === 'mixin');
         assertTrue('Mixins hierarchy calls 4',              child.mixinMethod4() === 'parent');
         assertTrue('Mixins should not copy destroy method', !child.hasOwnProperty('destroy') && !Child.prototype.hasOwnProperty('destroy'));
+        assertTrue('Mixins should apply its configuration', Child.prototype.cfg1 === '1child' && Child.prototype.cfg2 === '2mix');
     },
 
     /*
