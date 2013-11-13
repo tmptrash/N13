@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9515629a-48e6-4eb2-8d26-64864da1dfd8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="N13.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/N13$n13_js.coverage" NAME="n13.js Coverage Results" MODIFIED="1382090764299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/N13$n13_jstd.coverage" NAME="n13.jstd Coverage Results" MODIFIED="1383542479949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="N13" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="n13.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="251" column="6" selection-start="14669" selection-end="14669" vertical-scroll-proportion="1.3047619" vertical-offset="3696" max-vertical-offset="11556">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="n13.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/n13.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="898" column="46" selection-start="38695" selection-end="38695" vertical-scroll-proportion="0.0" vertical-offset="15801" max-vertical-offset="24894">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/test/n13.jstd" />
+        <option value="$PROJECT_DIR$/test/util/Common.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/n13.js" />
+        <option value="$PROJECT_DIR$/test/src/n13.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="27" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JsTestDriverJavaScript</id>
+          </State>
+          <State>
+            <id>LESS</id>
+          </State>
+          <State>
+            <id>Node.jsJavaScript</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>SASS/SCSS</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="last_opened_file_path" value="$USER_HOME$/projects/tmp/Player/Player1" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JsTestDriver.N13 library.testMixins">
+    <configuration default="false" name="N13 library.testNsWithCorrectValues" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/src/n13.js" />
+      <setting name="testCase" value="N13 library" />
+      <setting name="testMethod" value="testNsWithCorrectValues" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="n13.js" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="JS_FILE" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/src/n13.js" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="N13 library.testConfig" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/src/n13.js" />
+      <setting name="testCase" value="N13 library" />
+      <setting name="testMethod" value="testConfig" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="n13.jstd" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="N13 library.testMixins" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/src/n13.js" />
+      <setting name="testCase" value="N13 library" />
+      <setting name="testMethod" value="testMixins" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testNsWithCorrectValues" />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.n13.js" />
+      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testConfig" />
+      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.n13.jstd" />
+      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testMixins" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testMixins" />
+        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.n13.jstd" />
+        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.n13.js" />
+        <item index="3" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testConfig" />
+        <item index="4" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testNsWithCorrectValues" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="SHOW_INHERITED_FROM_OBJECT,SHOW_INHERITED" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9515629a-48e6-4eb2-8d26-64864da1dfd8" name="Default" comment="" />
+      <created>1381850466029</created>
+      <updated>1381850466029</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Updated README.md file">
+      <created>1381850481773</created>
+      <updated>1381850481773</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated IDE project files">
+      <created>1381851105902</created>
+      <updated>1381851105902</updated>
+    </task>
+    <task id="LOCAL-00003" summary="+ Added N13 Library and it's unit tests">
+      <created>1381852014872</created>
+      <updated>1381852014872</updated>
+    </task>
+    <task id="LOCAL-00004" summary="+ Added description">
+      <created>1381912221026</created>
+      <updated>1381912221026</updated>
+    </task>
+    <task id="LOCAL-00005" summary="+ Added description">
+      <created>1381912480329</created>
+      <updated>1381912480329</updated>
+    </task>
+    <task id="LOCAL-00006" summary="+ Added description">
+      <created>1381912532259</created>
+      <updated>1381912532259</updated>
+    </task>
+    <task id="LOCAL-00007" summary="+ Added description">
+      <created>1381926657720</created>
+      <updated>1381926657720</updated>
+    </task>
+    <task id="LOCAL-00008" summary="* Fixed library description">
+      <created>1381926730131</created>
+      <updated>1381926730131</updated>
+    </task>
+    <task id="LOCAL-00009" summary="* Fixed library description">
+      <created>1381926936883</created>
+      <updated>1381926936883</updated>
+    </task>
+    <task id="LOCAL-00010" summary="+ Added tests for all N13 functions">
+      <created>1382022125960</created>
+      <updated>1382022125960</updated>
+    </task>
+    <task id="LOCAL-00011" summary="+ Added tests for configuration and N13.ns() function">
+      <created>1382094693997</created>
+      <updated>1382094693997</updated>
+    </task>
+    <task id="LOCAL-00012" summary="* udef has moved inside the closure. Now, it's not a global variable. You should declare it by hands,i f you need.">
+      <created>1383542740319</created>
+      <updated>1383542740319</updated>
+    </task>
+    <task id="LOCAL-00013" summary="+ Added MIT license">
+      <created>1383556609326</created>
+      <updated>1383556609326</updated>
+    </task>
+    <task id="LOCAL-00014" summary="* test commit">
+      <created>1383903768614</created>
+      <updated>1383903768614</updated>
+    </task>
+    <task id="LOCAL-00015" summary="+ Added setConfig() method. User may set configuration after class will be instantiating">
+      <created>1383910195299</created>
+      <updated>1383910195299</updated>
+    </task>
+    <task id="LOCAL-00016" summary="* Fixed setConfig() method">
+      <created>1383913086503</created>
+      <updated>1383913086503</updated>
+    </task>
+    <task id="LOCAL-00017" summary="* Fixed setConfig() method">
+      <created>1383914375207</created>
+      <updated>1383914375207</updated>
+    </task>
+    <task id="LOCAL-00018" summary="* Fixed setConfig() method">
+      <created>1383914660138</created>
+      <updated>1383914660138</updated>
+    </task>
+    <task id="LOCAL-00019" summary="* Fixed setConfig() method">
+      <created>1383914852638</created>
+      <updated>1383914852638</updated>
+    </task>
+    <task id="LOCAL-00020" summary="+ Added optional annotation for 2 and 3 arguments in callMixin(0 method">
+      <created>1384182948309</created>
+      <updated>1384182948309</updated>
+    </task>
+    <task id="LOCAL-00021" summary="* Comment fixed">
+      <created>1384249923187</created>
+      <updated>1384249923187</updated>
+    </task>
+    <task id="LOCAL-00022" summary="* From now, destroy() method will not be copied from mixins into the main class. It should be called with callMixin() method or manually (Class.prototype.destroy.apply(this, [args])">
+      <created>1384250941789</created>
+      <updated>1384250941789</updated>
+    </task>
+    <task id="LOCAL-00023" summary="+ Unit test for destroy method in mixins was added">
+      <created>1384254053599</created>
+      <updated>1384254053599</updated>
+    </task>
+    <task id="LOCAL-00024" summary="* Fixed case, when parent class is undefined">
+      <created>1384352239789</created>
+      <updated>1384352239789</updated>
+    </task>
+    <task id="LOCAL-00025" summary="* Fixed case, when parent class is undefined">
+      <created>1384352338317</created>
+      <updated>1384352338317</updated>
+    </task>
+    <task id="LOCAL-00026" summary="* Fixed case, when parent class is undefined">
+      <created>1384352792766</created>
+      <updated>1384352792766</updated>
+    </task>
+    <task id="LOCAL-00027" summary="* Fixed case, when parent class is undefined">
+      <created>1384352888936</created>
+      <updated>1384352888936</updated>
+    </task>
+    <task id="LOCAL-00028" summary="+ Added ability to apply configuration from mixins">
+      <created>1384355416504</created>
+      <updated>1384355416504</updated>
+    </task>
+    <task id="LOCAL-00029" summary="+ Added unit tests for configuration in mixins">
+      <created>1384355945297</created>
+      <updated>1384355945297</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37691522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12084433" sideWeight="0.7014614" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46659708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29853863" sideWeight="0.49973643" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37265137" sideWeight="0.5002636" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20177267" sideWeight="0.6230848" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Updated README.md file" />
+    <MESSAGE value="Updated IDE project files" />
+    <MESSAGE value="+ Added N13 Library and it's unit tests" />
+    <MESSAGE value="+ Added description" />
+    <MESSAGE value="* Fixed library description" />
+    <MESSAGE value="+ Added tests for all N13 functions" />
+    <MESSAGE value="+ Added tests for configuration and N13.ns() function" />
+    <MESSAGE value="* udef has moved inside the closure. Now, it's not a global variable. You should declare it by hands,i f you need." />
+    <MESSAGE value="+ Added MIT license" />
+    <MESSAGE value="* test commit" />
+    <MESSAGE value="+ Added setConfig() method. User may set configuration after class will be instantiating" />
+    <MESSAGE value="* Fixed setConfig() method" />
+    <MESSAGE value="+ Added optional annotation for 2 and 3 arguments in callMixin(0 method" />
+    <MESSAGE value="* Comment fixed" />
+    <MESSAGE value="* From now, destroy() method will not be copied from mixins into the main class. It should be called with callMixin() method or manually (Class.prototype.destroy.apply(this, [args])" />
+    <MESSAGE value="+ Unit test for destroy method in mixins was added" />
+    <MESSAGE value="* Fixed case, when parent class is undefined" />
+    <MESSAGE value="+ Added ability to apply configuration from mixins" />
+    <MESSAGE value="+ Added unit tests for configuration in mixins" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Added unit tests for configuration in mixins" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="19" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="3" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="6" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1301" column="22" selection-start="57283" selection-end="57283" vertical-scroll-proportion="0.0" vertical-offset="22117" max-vertical-offset="22542">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="6" selection-start="17845" selection-end="17845" vertical-scroll-proportion="0.0" vertical-offset="5661" max-vertical-offset="10064" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="2925" selection-end="2928" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1308" column="43" selection-start="57289" selection-end="57289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="6" selection-start="17845" selection-end="17845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="2925" selection-end="2928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/run.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/js/MClass1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="38" selection-start="3418" selection-end="3418" vertical-scroll-proportion="0.80104715" vertical-offset="0" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="55" selection-start="822" selection-end="822" vertical-scroll-proportion="0.1555794" vertical-offset="395" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/backbone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/n13.jstd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="669" selection-end="669" vertical-scroll-proportion="0.63870966" vertical-offset="0" max-vertical-offset="930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="898" column="46" selection-start="38695" selection-end="38695" vertical-scroll-proportion="0.0" vertical-offset="15801" max-vertical-offset="24894">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="6" selection-start="14669" selection-end="14669" vertical-scroll-proportion="1.3047619" vertical-offset="3696" max-vertical-offset="11556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
