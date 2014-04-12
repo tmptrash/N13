@@ -739,7 +739,7 @@
                                 //
                                 // Here we must use this.self.base instead child.base
                                 //
-                                cfg.base = this.self.base;
+                                cfg.base = this.self.prototype;
                                 //
                                 // Save reference to current class
                                 //

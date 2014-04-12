@@ -379,11 +379,12 @@ AsyncTestCase("N13 library", {
         var child;
         var child1;
         var chch;
+        var chchch;
 
         define('Parent', {
             prop  : null,
             init  : function () {this.prop = 'parent';},
-            method: function () {this.prop = 1;}
+            method: function () {this.cp = 0; this.prop = 1;}
         });
         define('Child', {
             extend : 'Parent',
@@ -392,20 +393,24 @@ AsyncTestCase("N13 library", {
                 this.chParam = 'child';
                 this.callParent(arguments);
             },
-            method : function () {this.chParam = 2; this.callParent(arguments);}
+            method : function () {this.chParam = 2; this.callParent(arguments); this.cp++;}
         });
         define('ChildOfChild', {
             extend : 'Child',
             init   : function () {
                 this.callParent(arguments);
             },
-            method : function () {this.callParent(arguments);}
+            method : function () {this.callParent(arguments); this.cp++;}
+        });
+        define('ChildOfChildOfChild', {
+            extend : 'ChildOfChild'
         });
 
         parent = new Parent();
         child  = new Child();
         child1 = new Child({init: function () {this.callParent(arguments);}});
         chch   = new ChildOfChild();
+        chchch = new ChildOfChildOfChild({method: function () {this.callParent();}});
 
         assertTrue('Parent class calls callParent in constructor',         parent.prop === 'parent');
         child.method();
@@ -415,6 +420,8 @@ AsyncTestCase("N13 library", {
         assertTrue('ChildOfChild class calls callParent in constructor 2', chch.prop === 'parent');
         chch.method();
         assertTrue('ChildOfChild class calls callParent in method',        chch.chParam === 2 && chch.prop === 1);
+        chchch.method();
+        assertTrue('ChildOfChildOfChild class calls callParent in config', chchch.cp === 2 && chchch.prop === 1 && chchch.chParam === 2);
     },
 
     /*
