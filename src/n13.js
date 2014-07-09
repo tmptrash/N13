@@ -15,7 +15,9 @@
  *
  * The main functions, which do the job is N13.define. It gets all the parameters and creates the class.
  * See it's description for details. Second, important function is N13.create(). It creates a class instance and loads
- * all dependencies asynchronously at the first time and just creates and return  the instance at second time.
+ * all dependencies asynchronously at the first time and just creates and return the instance at second.
+ *
+ * P.S. Inspired by ExtJs 4
  *
  * @author DeadbraiN
  * @email  tmptrash@mail.ru
@@ -38,7 +40,7 @@
      *                               e.g: http://www.g.gl/do/index.html -> http://www.g.gl/do/
      * @private
      */
-    var _config = {
+    var _config      = {
         appRoot    : ['App', 'js'],
         cache      : false,
         fileTimeout: 10000,
@@ -67,7 +69,7 @@
      * @private
      * {Boolean} true if user has called N13.create() and now nested files are loading.
      */
-    var _isCreating = false;
+    var _isCreating  = false;
     /**
      * {Object} The map of classes, which are loading at the moment. It contains all deep dependencies.
      * @private
@@ -113,7 +115,6 @@
     var isArray;
     var isObject;
     var emptyFn;
-    var require;
     var create;
     var ns;
 
@@ -128,6 +129,29 @@
         var parts = cl.split('.');
 
         return parts[0] === _config.appRoot[0];
+    }
+
+    /**
+     * Loads required class file into the DOM and run it. If class file has already loaded, then it returns true.
+     * It returns false, if some files haven't loaded and wil be loaded soon asynchronously.
+     * Callback function will be called in any case.
+     *
+     * @param {String|Array} cl Class name. e.g.: 'App.Class'
+     * @param {Function|undefined} callback Will be called after file will load
+     * @param {Object} scope Scope for callback function
+     */
+    function _require(cl, callback, scope) {
+        var clFunc = ns(cl, false);
+
+        _onLoadStart(callback, scope);
+        //
+        // If current class has already loaded
+        //
+        if (clFunc && clFunc.prototype.finished) {
+            _onLoadEnd();
+        } else {
+            _loadClass(cl);
+        }
     }
 
     /**
@@ -217,7 +241,7 @@
             if (_loadClasses.hasOwnProperty(cl)) {
                 if (time - _loadClasses[cl] > _config.fileTimeout) {
                     clearInterval(_loadTimerId);
-                    throw Error('During the dependency loading, file ' + cl + ' haven\'t loaded with timeout ' + _config.fileTimeout + 'ms');
+                    throw new Error('During the dependency loading, file ' + cl + ' haven\'t loaded with timeout ' + _config.fileTimeout + 'ms');
                 }
             }
         }
@@ -351,34 +375,6 @@
                 if (cfg.hasOwnProperty(i)) {
                     _config[i] = cfg[i];
                 }
-            }
-        },
-
-        /**
-         * Loads required class files into the DOM and run them. If class files have already loaded, then it returns true.
-         * It returns false, if some files haven't loaded and wil be loaded soon asynchronously.
-         * Callback function will be called in any case. This method uses RequireJs library for script loading.
-         * For example:
-         *
-         *     N13.require(['App.controller.Edit', 'App.view.Edit'], function () {
-         *         // Do something with classes...
-         *     });
-         *
-         * @param {String|Array} classes Class name or names array. e.g.: 'App.Class' or ['App.view.Widget', 'App.model.Person']
-         * @param {Function|undefined} callback Will be called after file will load
-         * @param {Object} scope Scope for callback function
-         */
-        require: require = function require(cl, callback, scope) {
-            var clFunc = ns(cl, false);
-
-            _onLoadStart(callback, scope);
-            //
-            // If current class has already loaded
-            //
-            if (clFunc && clFunc.prototype.finished) {
-                _onLoadEnd();
-            } else {
-                _loadClass(cl);
             }
         },
 
@@ -1043,7 +1039,7 @@
                     parentName = parent;
                     parent     = ns(parent, false);
                     if (parent === false) {
-                        throw Error('Child class (' + (childNs ? childNs + '.' : '') + childStr + ') has undefined parent class (' + parentName + ').');
+                        throw new Error('Child class (' + (childNs ? childNs + '.' : '') + childStr + ') has undefined parent class (' + parentName + ').');
                     }
                 }
 
@@ -1115,6 +1111,7 @@
                  * @return {Object} method related value
                  */
                 child.prototype.callMixin = function callMixin(mixin, method, args) {
+                    //noinspection JSHint
                     var caller = arguments.callee.caller;
 
                     //noinspection JSHint
@@ -1308,7 +1305,7 @@
             //
             // If all nested(required) files have already loaded, then callback function will be called immediately
             //
-            require(cl, function () {
+            _require(cl, function () {
                 var Ctor = ns(cl, false);
                 var instance;
 

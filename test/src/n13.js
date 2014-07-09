@@ -1,8 +1,8 @@
-/*global App, EmptyParent, Child, Parent, Parent1, Parent2, Grandson, ChildOfChild */
+/*global App, EmptyParent, Child, Child1, Parent, Parent1, Parent2, Grandson, ChildOfChild, ChildOfChildOfChild, Base */
 
 //
 // TODO: Add mixed tests. For example: how config changes mixin methods and so on...
-// TODO: tests for ns and require methods
+// TODO: tests for ns method
 //
 
 /**

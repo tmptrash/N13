@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9515629a-48e6-4eb2-8d26-64864da1dfd8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="9515629a-48e6-4eb2-8d26-64864da1dfd8" name="Default" comment="* method require was moved to the private, because it is not used directly in code">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/n13.js" afterPath="$PROJECT_DIR$/src/n13.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/n13.js" afterPath="$PROJECT_DIR$/test/src/n13.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="N13.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,19 +31,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="n13.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+      <file leaf-file-name="n13.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/n13.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="6" selection-start="14669" selection-end="14669" vertical-scroll-proportion="1.3047619" vertical-offset="3696" max-vertical-offset="11556">
-              <folding />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="8390" max-vertical-offset="13224">
+              <caret line="642" column="18" selection-start-line="642" selection-start-column="18" selection-end-line="642" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#849#0" expanded="false" />
+                <element signature="e#875#1911#0" expanded="false" />
+                <element signature="e#1935#2377#0" expanded="false" />
+                <element signature="e#2383#2713#0" expanded="false" />
+                <element signature="e#2744#2859#0" expanded="false" />
+                <element signature="e#2894#3025#0" expanded="false" />
+                <element signature="e#3057#3176#0" expanded="false" />
+                <element signature="e#3210#3322#0" expanded="false" />
+                <element signature="e#3350#3426#0" expanded="false" />
+                <element signature="e#3451#4043#0" expanded="false" />
+                <element signature="e#4077#4218#0" expanded="false" />
+                <element signature="e#4343#4535#0" expanded="false" />
+                <element signature="e#4565#4656#0" expanded="false" />
+                <element signature="e#5473#5854#0" expanded="false" />
+                <element signature="e#5890#6707#0" expanded="false" />
+                <element signature="e#6713#6941#0" expanded="false" />
+                <element signature="e#6971#7132#0" expanded="false" />
+                <element signature="e#7138#7404#0" expanded="false" />
+                <element signature="e#7442#7613#0" expanded="false" />
+                <element signature="e#7619#7758#0" expanded="false" />
+                <element signature="e#7785#7925#0" expanded="false" />
+                <element signature="e#7931#8153#0" expanded="false" />
+                <element signature="e#8186#8645#0" expanded="false" />
+                <element signature="e#8651#8927#0" expanded="false" />
+                <element signature="e#10913#11057#0" expanded="false" />
+                <element signature="e#11099#11185#0" expanded="false" />
+                <element signature="e#11219#11376#0" expanded="false" />
+                <element signature="e#11436#11593#0" expanded="false" />
+                <element signature="e#11650#11705#0" expanded="false" />
+                <element signature="e#11716#11871#0" expanded="false" />
+                <element signature="e#11922#12009#0" expanded="false" />
+                <element signature="e#12020#12175#0" expanded="false" />
+                <element signature="e#12223#12309#0" expanded="false" />
+                <element signature="e#12320#12478#0" expanded="false" />
+                <element signature="e#12523#12612#0" expanded="false" />
+                <element signature="e#12623#12764#0" expanded="false" />
+                <element signature="e#12794#12972#0" expanded="false" />
+                <element signature="e#12983#13665#0" expanded="false" />
+                <element signature="e#13716#15069#0" expanded="false" />
+                <element signature="e#28240#28871#0" expanded="false" />
+                <element signature="e#28927#32544#0" expanded="false" />
+                <element signature="e#32558#32949#0" expanded="false" />
+                <element signature="e#33003#44936#0" expanded="false" />
+                <element signature="e#44950#45302#0" expanded="false" />
+                <element signature="e#45359#49219#0" expanded="false" />
+                <element signature="e#49644#50229#0" expanded="false" />
+                <element signature="e#50243#50777#0" expanded="false" />
+                <element signature="e#50814#51163#0" expanded="false" />
+                <element signature="e#51178#51180#0" expanded="false" />
+                <element signature="e#51292#51294#0" expanded="false" />
+                <element signature="e#51613#51615#0" expanded="false" />
+                <element signature="e#52261#52263#0" expanded="false" />
+                <element signature="e#53584#56915#0" expanded="false" />
+                <element signature="e#58211#59232#0" expanded="false" />
+                <element signature="e#59251#59253#0" expanded="false" />
+                <element signature="e#59449#59687#0" expanded="false" />
+                <element signature="e#59719#59783#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="n13.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/n13.js">
+      <file leaf-file-name="n13.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/n13.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="898" column="46" selection-start="38695" selection-end="38695" vertical-scroll-proportion="0.0" vertical-offset="15801" max-vertical-offset="24894">
+            <state vertical-scroll-proportion="0.1934236" vertical-offset="13028" max-vertical-offset="15576">
+              <caret line="547" column="77" selection-start-line="547" selection-start-column="77" selection-end-line="547" selection-end-column="77" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,15 +142,16 @@
         <option value="$PROJECT_DIR$/test/n13.jstd" />
         <option value="$PROJECT_DIR$/test/util/Common.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/n13.js" />
         <option value="$PROJECT_DIR$/test/src/n13.js" />
+        <option value="$PROJECT_DIR$/src/n13.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -88,6 +162,9 @@
           </State>
           <State>
             <id>CSS</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
           </State>
           <State>
             <id>Internationalization issues</id>
@@ -120,6 +197,11 @@
             <id>XSLT</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -137,7 +219,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -149,7 +231,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,6 +277,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -210,30 +309,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSHint" />
     <property name="last_opened_file_path" value="$USER_HOME$/projects/tmp/Player/Player1" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/util" />
     </key>
   </component>
-  <component name="RunManager" selected="JsTestDriver.N13 library.testMixins">
+  <component name="RunManager" selected="JsTestDriver.n13.jstd">
     <configuration default="false" name="N13 library.testNsWithCorrectValues" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_METHOD" />
       <setting name="configType" value="FILE_PATH" />
@@ -242,7 +343,7 @@
       <setting name="testCase" value="N13 library" />
       <setting name="testMethod" value="testNsWithCorrectValues" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
       <method />
@@ -253,7 +354,7 @@
       <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
       <setting name="jsFile" value="$PROJECT_DIR$/test/src/n13.js" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
       <RunnerSettings RunnerId="JstdDebugProgramRunner" />
       <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
@@ -268,7 +369,7 @@
       <setting name="testCase" value="N13 library" />
       <setting name="testMethod" value="testConfig" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <RunnerSettings RunnerId="JstdDebugProgramRunner" />
       <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
@@ -279,7 +380,7 @@
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="$PROJECT_DIR$/test/n13.jstd" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
       <RunnerSettings RunnerId="JstdDebugProgramRunner" />
@@ -296,7 +397,7 @@
       <setting name="testCase" value="N13 library" />
       <setting name="testMethod" value="testMixins" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <RunnerSettings RunnerId="JstdDebugProgramRunner" />
       <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
@@ -321,7 +422,7 @@
       <option name="testName" />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
       <envs />
       <method />
     </configuration>
@@ -329,14 +430,19 @@
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
       <method />
     </configuration>
     <list size="5">
@@ -348,8 +454,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testMixins" />
-        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.n13.jstd" />
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.n13.jstd" />
+        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testMixins" />
         <item index="2" class="java.lang.String" itemvalue="JsTestDriver.n13.js" />
         <item index="3" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testConfig" />
         <item index="4" class="java.lang.String" itemvalue="JsTestDriver.N13 library.testNsWithCorrectValues" />
@@ -359,6 +465,9 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value="SHOW_INHERITED_FROM_OBJECT,SHOW_INHERITED" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -506,21 +615,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
+    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37691522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37623763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12084433" sideWeight="0.7014614" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12057113" sideWeight="0.7014614" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46659708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29853863" sideWeight="0.49973643" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37265137" sideWeight="0.5002636" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48734874" sideWeight="0.49973643" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37183717" sideWeight="0.5002636" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -530,6 +639,14 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -557,107 +674,266 @@
     <MESSAGE value="* Fixed case, when parent class is undefined" />
     <MESSAGE value="+ Added ability to apply configuration from mixins" />
     <MESSAGE value="+ Added unit tests for configuration in mixins" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Added unit tests for configuration in mixins" />
+    <MESSAGE value="* method require was moved to the private, because it is not used directly in code" />
+    <option name="LAST_COMMIT_MESSAGE" value="* method require was moved to the private, because it is not used directly in code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="3" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="6" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/n13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1301" column="22" selection-start="57283" selection-end="57283" vertical-scroll-proportion="0.0" vertical-offset="22117" max-vertical-offset="22542">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="33192">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#849#0" expanded="false" />
+            <element signature="e#875#1911#0" expanded="false" />
+            <element signature="e#1935#2377#0" expanded="false" />
+            <element signature="e#2383#2713#0" expanded="false" />
+            <element signature="e#2744#2859#0" expanded="false" />
+            <element signature="e#2894#3025#0" expanded="false" />
+            <element signature="e#3057#3176#0" expanded="false" />
+            <element signature="e#3210#3322#0" expanded="false" />
+            <element signature="e#3350#3426#0" expanded="false" />
+            <element signature="e#3451#4043#0" expanded="false" />
+            <element signature="e#4077#4218#0" expanded="false" />
+            <element signature="e#4343#4535#0" expanded="false" />
+            <element signature="e#4565#4656#0" expanded="false" />
+            <element signature="e#5473#5854#0" expanded="false" />
+            <element signature="e#5890#6707#0" expanded="false" />
+            <element signature="e#6713#6941#0" expanded="false" />
+            <element signature="e#6971#7132#0" expanded="false" />
+            <element signature="e#7138#7404#0" expanded="false" />
+            <element signature="e#7442#7613#0" expanded="false" />
+            <element signature="e#7619#7758#0" expanded="false" />
+            <element signature="e#7785#7925#0" expanded="false" />
+            <element signature="e#7931#8153#0" expanded="false" />
+            <element signature="e#8186#8645#0" expanded="false" />
+            <element signature="e#8651#8927#0" expanded="false" />
+            <element signature="e#10913#11057#0" expanded="false" />
+            <element signature="e#11099#11185#0" expanded="false" />
+            <element signature="e#11219#11376#0" expanded="false" />
+            <element signature="e#11436#11593#0" expanded="false" />
+            <element signature="e#11650#11705#0" expanded="false" />
+            <element signature="e#11716#11871#0" expanded="false" />
+            <element signature="e#11922#12009#0" expanded="false" />
+            <element signature="e#12020#12175#0" expanded="false" />
+            <element signature="e#12223#12309#0" expanded="false" />
+            <element signature="e#12320#12478#0" expanded="false" />
+            <element signature="e#12523#12612#0" expanded="false" />
+            <element signature="e#12623#12764#0" expanded="false" />
+            <element signature="e#12794#12972#0" expanded="false" />
+            <element signature="e#12983#13665#0" expanded="false" />
+            <element signature="e#13716#15069#0" expanded="false" />
+            <element signature="e#28240#28871#0" expanded="false" />
+            <element signature="e#28927#32544#0" expanded="false" />
+            <element signature="e#32558#32949#0" expanded="false" />
+            <element signature="e#33003#44936#0" expanded="false" />
+            <element signature="e#44950#45302#0" expanded="false" />
+            <element signature="e#45359#49219#0" expanded="false" />
+            <element signature="e#49644#50229#0" expanded="false" />
+            <element signature="e#50243#50777#0" expanded="false" />
+            <element signature="e#50814#51163#0" expanded="false" />
+            <element signature="e#51178#51180#0" expanded="false" />
+            <element signature="e#51292#51294#0" expanded="false" />
+            <element signature="e#51613#51615#0" expanded="false" />
+            <element signature="e#52261#52263#0" expanded="false" />
+            <element signature="e#53584#56915#0" expanded="false" />
+            <element signature="e#58211#59232#0" expanded="false" />
+            <element signature="e#59251#59253#0" expanded="false" />
+            <element signature="e#59449#59687#0" expanded="false" />
+            <element signature="e#59719#59783#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/n13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="6" selection-start="17845" selection-end="17845" vertical-scroll-proportion="0.0" vertical-offset="5661" max-vertical-offset="10064" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6024" max-vertical-offset="15288">
+          <caret line="251" column="6" selection-start-line="251" selection-start-column="6" selection-end-line="251" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="2925" selection-end="2928" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1054" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1275">
+          <caret line="40" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/n13.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1308" column="43" selection-start="57289" selection-end="57289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1275">
+          <caret line="28" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/n13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="6" selection-start="17845" selection-end="17845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5661" max-vertical-offset="10064">
+          <caret line="333" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/util/Common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="2925" selection-end="2928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1054">
+          <caret line="16" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/n13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="333" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="16" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/run.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/js/MClass1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="38" selection-start="3418" selection-end="3418" vertical-scroll-proportion="0.80104715" vertical-offset="0" max-vertical-offset="1054" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="55" selection-start="822" selection-end="822" vertical-scroll-proportion="0.1555794" vertical-offset="395" max-vertical-offset="1350">
-          <folding />
+        <state vertical-scroll-proportion="0.1555794" vertical-offset="395" max-vertical-offset="1350">
+          <caret line="30" column="55" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/backbone.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28386">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28386">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/n13.jstd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="669" selection-end="669" vertical-scroll-proportion="0.63870966" vertical-offset="0" max-vertical-offset="930" />
+        <state vertical-scroll-proportion="0.63870966" vertical-offset="0" max-vertical-offset="930">
+          <caret line="33" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1488">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JsTestDriver/lib/JsTestDriver-plugin.jar!/com/google/jstestdriver/idea/assertFramework/jstd/jsSrc/TestCase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325688" vertical-offset="934" max-vertical-offset="2736">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="872">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/n13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="898" column="46" selection-start="38695" selection-end="38695" vertical-scroll-proportion="0.0" vertical-offset="15801" max-vertical-offset="24894">
-          <folding />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="8390" max-vertical-offset="13224">
+          <caret line="642" column="18" selection-start-line="642" selection-start-column="18" selection-end-line="642" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#849#0" expanded="false" />
+            <element signature="e#875#1911#0" expanded="false" />
+            <element signature="e#1935#2377#0" expanded="false" />
+            <element signature="e#2383#2713#0" expanded="false" />
+            <element signature="e#2744#2859#0" expanded="false" />
+            <element signature="e#2894#3025#0" expanded="false" />
+            <element signature="e#3057#3176#0" expanded="false" />
+            <element signature="e#3210#3322#0" expanded="false" />
+            <element signature="e#3350#3426#0" expanded="false" />
+            <element signature="e#3451#4043#0" expanded="false" />
+            <element signature="e#4077#4218#0" expanded="false" />
+            <element signature="e#4343#4535#0" expanded="false" />
+            <element signature="e#4565#4656#0" expanded="false" />
+            <element signature="e#5473#5854#0" expanded="false" />
+            <element signature="e#5890#6707#0" expanded="false" />
+            <element signature="e#6713#6941#0" expanded="false" />
+            <element signature="e#6971#7132#0" expanded="false" />
+            <element signature="e#7138#7404#0" expanded="false" />
+            <element signature="e#7442#7613#0" expanded="false" />
+            <element signature="e#7619#7758#0" expanded="false" />
+            <element signature="e#7785#7925#0" expanded="false" />
+            <element signature="e#7931#8153#0" expanded="false" />
+            <element signature="e#8186#8645#0" expanded="false" />
+            <element signature="e#8651#8927#0" expanded="false" />
+            <element signature="e#10913#11057#0" expanded="false" />
+            <element signature="e#11099#11185#0" expanded="false" />
+            <element signature="e#11219#11376#0" expanded="false" />
+            <element signature="e#11436#11593#0" expanded="false" />
+            <element signature="e#11650#11705#0" expanded="false" />
+            <element signature="e#11716#11871#0" expanded="false" />
+            <element signature="e#11922#12009#0" expanded="false" />
+            <element signature="e#12020#12175#0" expanded="false" />
+            <element signature="e#12223#12309#0" expanded="false" />
+            <element signature="e#12320#12478#0" expanded="false" />
+            <element signature="e#12523#12612#0" expanded="false" />
+            <element signature="e#12623#12764#0" expanded="false" />
+            <element signature="e#12794#12972#0" expanded="false" />
+            <element signature="e#12983#13665#0" expanded="false" />
+            <element signature="e#13716#15069#0" expanded="false" />
+            <element signature="e#28240#28871#0" expanded="false" />
+            <element signature="e#28927#32544#0" expanded="false" />
+            <element signature="e#32558#32949#0" expanded="false" />
+            <element signature="e#33003#44936#0" expanded="false" />
+            <element signature="e#44950#45302#0" expanded="false" />
+            <element signature="e#45359#49219#0" expanded="false" />
+            <element signature="e#49644#50229#0" expanded="false" />
+            <element signature="e#50243#50777#0" expanded="false" />
+            <element signature="e#50814#51163#0" expanded="false" />
+            <element signature="e#51178#51180#0" expanded="false" />
+            <element signature="e#51292#51294#0" expanded="false" />
+            <element signature="e#51613#51615#0" expanded="false" />
+            <element signature="e#52261#52263#0" expanded="false" />
+            <element signature="e#53584#56915#0" expanded="false" />
+            <element signature="e#58211#59232#0" expanded="false" />
+            <element signature="e#59251#59253#0" expanded="false" />
+            <element signature="e#59449#59687#0" expanded="false" />
+            <element signature="e#59719#59783#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/n13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="6" selection-start="14669" selection-end="14669" vertical-scroll-proportion="1.3047619" vertical-offset="3696" max-vertical-offset="11556">
-          <folding />
+        <state vertical-scroll-proportion="0.1934236" vertical-offset="13028" max-vertical-offset="15576">
+          <caret line="547" column="77" selection-start-line="547" selection-start-column="77" selection-end-line="547" selection-end-column="77" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
