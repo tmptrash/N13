@@ -60,12 +60,46 @@ N13.define('App.Drum', {
     }
 });
 
+> var drum = new App.Drum;
+> drum.vol;  // Shows 10
 > var drum = new App.Drum({vol: 20});
+> drum.vol;  // Shows 20
 > drum.setConfig({vol: 30});
+> drum.vol;  // Shows 30
 ```
 
 
-### Example 4: View class, which is inherited from Backbone.View:
+### Example 4: Constructor method:
+
+```javascript
+N13.define('App.Drum', {
+    init: function () {
+        console.log('boom');
+    }
+});
+
+var drum = new App.Drum(); // Shows 'boom'
+```
+
+
+### Example 5: Simple mixin example:
+
+```javascript
+// This is our mixin
+N13.define('App.Vocal', {
+    voice: function () {return 'aaa'}
+});
+
+N13.define('App.Drum', {
+    mixins: {v: 'App.Vocal'}, // Here we include the mixin
+    voice : function () {
+        return this.callMixin('v') + ' boom';
+    }
+});
+```
+
+
+### Example 6: View class, which is inherited from Backbone.View:
 
 ```javascript
 N13.define('App.View', {        // String namespace
@@ -95,7 +129,7 @@ App.View.func();                // Returns 'hello'
 ```
 
 
-### Example 5: Multiple inheritance with mixin:
+### Example 7: Multiple inheritance with mixin:
 
 ```javascript
 N13.define('Mixin', {method: function () {return ' mixed';}});

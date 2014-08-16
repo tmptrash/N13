@@ -112,8 +112,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6587112" vertical-offset="1320" max-vertical-offset="2976">
-              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.7422434" vertical-offset="2930" max-vertical-offset="3768">
+              <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -621,7 +621,11 @@
       <created>1408185960595</created>
       <updated>1408185960595</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fixed examples">
+      <created>1408186071611</created>
+      <updated>1408186071611</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -705,7 +709,9 @@
     <MESSAGE value="+ Added ability to apply configuration from mixins" />
     <MESSAGE value="+ Added unit tests for configuration in mixins" />
     <MESSAGE value="* method require was moved to the private, because it is not used directly in code" />
-    <option name="LAST_COMMIT_MESSAGE" value="* method require was moved to the private, because it is not used directly in code" />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="Fixed examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed examples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1349,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6587112" vertical-offset="1320" max-vertical-offset="2976">
-          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.7422434" vertical-offset="2930" max-vertical-offset="3768">
+          <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
           <folding />
         </state>
       </provider>
