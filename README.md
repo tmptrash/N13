@@ -18,6 +18,7 @@ JavaScript Object Oriented Library. It supports:
 
 ### Example 1: How to create static fields or static methods:
 
+```javascript
 N13.define('App.Drum', {
     statics: {
         title   : 'drum',
@@ -26,13 +27,14 @@ N13.define('App.Drum', {
         }
     }
 });
-
+```javascript
 > App.Drum.title;       // Shows 'drum'
 > App.Drum.getTitles(); // Shows 'drum'
 
 
 ### Example 2: Classic inheritance:
 
+```javascript
 N13.define('App.Drum', {
     getTitle: function () {return 'drum '}
 });
@@ -42,12 +44,25 @@ N13.define('App.Bass', {
         return this.callParent() + '& bass';
     }
 });
-
+```javascript
 > var drum = new App.Drum;
 > drum.getTitle();  // Shows 'drum & bass'
 
 
-### Example 3: View class, which is inherited from Backbone.View:
+### Example 3: Class configuration:
+
+```javascript
+N13.define('App.Drum', {
+    configs: {
+        vol: 10
+    }
+});
+```javascript
+> var drum = new App.Drum({vol: 20});
+> drum.setConfig({vol: 30});
+
+
+### Example 4: View class, which is inherited from Backbone.View:
 
 ```javascript
 N13.define('App.View', {        // String namespace
@@ -77,7 +92,7 @@ App.View.func();                // Returns 'hello'
 ```
 
 
-### Example 4: Multiple inheritance with mixin:
+### Example 5: Multiple inheritance with mixin:
 
 ```javascript
 N13.define('Mixin', {method: function () {return ' mixed';}});
