@@ -112,8 +112,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7422434" vertical-offset="2930" max-vertical-offset="3768">
-              <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.65632457" vertical-offset="2018" max-vertical-offset="3984">
+              <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -625,7 +625,11 @@
       <created>1408186071611</created>
       <updated>1408186071611</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Fixed examples">
+      <created>1408186498647</created>
+      <updated>1408186498647</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1355,8 +1359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7422434" vertical-offset="2930" max-vertical-offset="3768">
-          <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.65632457" vertical-offset="2018" max-vertical-offset="3984">
+          <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
           <folding />
         </state>
       </provider>
