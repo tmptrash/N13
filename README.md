@@ -27,9 +27,10 @@ N13.define('App.Drum', {
         }
     }
 });
-```javascript
+
 > App.Drum.title;       // Shows 'drum'
 > App.Drum.getTitles(); // Shows 'drum'
+```
 
 
 ### Example 2: Classic inheritance:
@@ -44,9 +45,10 @@ N13.define('App.Bass', {
         return this.callParent() + '& bass';
     }
 });
-```javascript
+
 > var drum = new App.Drum;
 > drum.getTitle();  // Shows 'drum & bass'
+```
 
 
 ### Example 3: Class configuration:
@@ -57,9 +59,10 @@ N13.define('App.Drum', {
         vol: 10
     }
 });
-```javascript
+
 > var drum = new App.Drum({vol: 20});
 > drum.setConfig({vol: 30});
+```
 
 
 ### Example 4: View class, which is inherited from Backbone.View:

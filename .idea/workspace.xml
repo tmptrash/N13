@@ -112,8 +112,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42720765" vertical-offset="1514" max-vertical-offset="2904">
-              <caret line="78" column="62" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.6587112" vertical-offset="1320" max-vertical-offset="2976">
+              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -617,7 +617,11 @@
       <created>1408185706350</created>
       <updated>1408185706350</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="* method require was moved to the private, because it is not used directly in code">
+      <created>1408185960595</created>
+      <updated>1408185960595</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1345,8 +1349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42720765" vertical-offset="1514" max-vertical-offset="2904">
-          <caret line="78" column="62" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.6587112" vertical-offset="1320" max-vertical-offset="2976">
+          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
           <folding />
         </state>
       </provider>
