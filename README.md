@@ -149,8 +149,8 @@ N13.define('App.Class', {        // App.Class is a function
     mixins: {mix: 'Mixin'},      // List of mixins
     method: function () {        // Overridden method
         return 'Hello' +
-        this.callMixin('mix') +  // Calls method() from Base
-        this.callParent();       // Calls method() from Mixin
+        this.callMixin('mix') +  // Calls method() from Mixin
+        this.callParent();       // Calls method() from Base
     }
 });
 
