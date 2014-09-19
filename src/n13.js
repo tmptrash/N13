@@ -21,30 +21,37 @@
  *
  * @author DeadbraiN
  * @email  tmptrash@mail.ru
+ * @source https://github.com/tmptrash/N13
  */
 (function (global) {
     /**
-     * {Object} _config              Configuration of N13 library. Is used in N13.init() method.
-     * {Array}  _config.appRoot      Map of application name and application folder on server. e.g.:
+     * {Object} _config                  Configuration of N13 library. Is used in N13.init() method.
+     * {Array}  _config.appRoot          Map of application name and application folder on server. e.g.:
      *
      *     N13.init({appRoot: [App: 'js']});
      *
-     *     appRoot means the root folder of our application. In this case - 'js'. Key - 'App' means
-     *     the name of out application, which is used in all namespaces at the beginning. Example: App.view.Edit or
-     *     App.util.String and so on. By default this value equals to App: 'js'
+     *                                   appRoot means the root folder of our application. In this case -
+     *                                   'js'. Key - 'App' means the name of out application, which is
+     *                                   used in all namespaces at the beginning. Example: App.view.Edit
+     *                                   or App.util.String and so on. By default this value equals to
+     *                                   App: 'js'
      *
-     * {Boolean} _config.cache       Set to true and browser will be able to cache loaded files
-     * {Number}  _config.fileTimeout Maximum timeout for loading of one file in milliseconds
-     * {String}  _config.baseUrl     URL of current html page without index file at the end. It
-     *                               also contains slash at the end.
-     *                               e.g: http://www.g.gl/do/index.html -> http://www.g.gl/do/
+     * {Boolean} _config.cache           Set to true and browser will be able to cache loaded files
+     * {Number}  _config.timeout         Maximum timeout for loading of one file in milliseconds
+     * {Number}  _config.timeoutInterval An interval in milliseconds, which is used for files timeout
+     *                                   check. This is how we checks if some files haven't loaded
+     *                                   during period of time set by _config.timeout
+     * {String}  _config.baseUrl         URL of current html page without index file at the end. It
+     *                                   also contains slash at the end.
+     *                                   e.g: http://www.g.gl/do/index.html -> http://www.g.gl/do/
      * @private
      */
     var _config      = {
-        appRoot    : ['App', 'js'],
-        cache      : false,
-        fileTimeout: 10000,
-        baseUrl    : (function () {
+        appRoot        : ['App', 'js'],
+        cache          : false,
+        timeout        : 10000,
+        timeoutInterval: 500,
+        baseUrl        : (function () {
             var url     = document.location.href;
             var baseUrl = url.split('#');
 
@@ -61,17 +68,19 @@
     /**
      * {Number} Amount of files, which are loading at the moment. Loading process should be started by N13.create()
      * function. This amount will be set into the amount of required files and will be decreased to zero. Zero means
-     * that all dependencies has loaded and we can create full class.
+     * that all dependencies has loaded and we can create full classes.
      * @private
      */
-    var _fileLoading = 0;
+    var _filesLoading = 0;
     /**
      * @private
-     * {Boolean} true if user has called N13.create() and now nested files are loading.
+     * {Boolean} true if user has called N13.create() and now required files (dependencies) are loading.
      */
     var _isCreating  = false;
     /**
      * {Object} The map of classes, which are loading at the moment. It contains all deep dependencies.
+     * Key is a class name (e.g. App.Class), value is a time, when loading of this class has started.
+     * It's used for loading timeout check.
      * @private
      */
     var _loadClasses = {};
@@ -195,11 +204,11 @@
      * @private
      */
     function _onFileLoaded() {
-        _fileLoading--;
+        _filesLoading--;
         //
         // All scripts have already loaded
         //
-        if (!_fileLoading) {
+        if (!_filesLoading) {
             _onLoadEnd();
         }
     }
@@ -212,7 +221,7 @@
      */
     function _onLoadStart(cb, scope) {
         _isCreating    = true;
-        _loadTimerId   = setInterval(_onFileLoadTimer, 100);
+        _loadTimerId   = setInterval(_onFileLoadTimer, _config.timeoutInterval);
         _loadCallback  = cb || emptyFn;
         _loadScope     = scope;
     }
@@ -239,9 +248,9 @@
 
         for (cl in _loadClasses) {
             if (_loadClasses.hasOwnProperty(cl)) {
-                if (time - _loadClasses[cl] > _config.fileTimeout) {
+                if (time - _loadClasses[cl] > _config.timeout) {
                     clearInterval(_loadTimerId);
-                    throw new Error('During the dependency loading, file ' + cl + ' haven\'t loaded with timeout ' + _config.fileTimeout + 'ms');
+                    throw new Error('During the dependency loading, file ' + cl + ' haven\'t loaded with timeout ' + _config.timeout + 'ms');
                 }
             }
         }
@@ -273,7 +282,7 @@
                 node.src     = baseUrl + _config.appRoot[1] + '/' + _classToFile(cl) + '.js' + (_config.cache ? '?u=' + (new Date()).getTime() : '');
 
                 head.appendChild(node);
-                _fileLoading++;
+                _filesLoading++;
                 _loadClasses[cl] = (new Date()).getTime();
             }
         }
@@ -305,7 +314,7 @@
         //
         // All scripts have already loaded
         //
-        if (!_fileLoading) {
+        if (!_filesLoading) {
             _onLoadEnd();
         }
     }
