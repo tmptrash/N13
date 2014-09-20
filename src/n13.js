@@ -1127,12 +1127,22 @@
                 child.prototype.callMixin = function callMixin(mixin, method, args) {
                     //noinspection JSHint
                     var caller = arguments.callee.caller;
+                    var mix    = caller.cl.mixins[mixin];
 
                     //noinspection JSHint
                     method = isString(method) ? method : caller.fn;
                     args   = isArray(args) ? args : isArray(method) ? method : [];
 
-                    return caller.cl.mixins[mixin][method].apply(this, args);
+                    //
+                    // It's possible, that mixin or method is(are) undefined
+                    //
+                    if (!mix) {
+                        throw new Error('Undefined mixin "' + mixin + '" name was specified: In class: ' + this.className);
+                    }
+                    if (!mix[method]) {
+                        throw new Error('Undefined method "' + method + '" of mixin: "' + mixin + '" was specified');
+                    }
+                    return mix[method].apply(this, args);
                 };
 
                 return child;
