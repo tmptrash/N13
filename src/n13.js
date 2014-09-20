@@ -201,14 +201,19 @@
     /**
      * Callback function, which will be called for every asynchronously loaded script. This callback is a guaranty of
      * that the file was loaded and translated by JS interpreter fully to the end.
+     * @param {String} cl Full class name win namespace. e.g. "App.xxx.Class"
      * @private
      */
-    function _onFileLoaded() {
-        _filesLoading--;
+    function _onFileLoaded(cl) {
         //
-        // All scripts have already loaded
+        // File has loaded and we need to remove it's loading time
+        // from time map, otherwise, N13 may trows a timeout error.
         //
-        if (!_filesLoading) {
+        delete _loadClasses[cl];
+        //
+        // All files have already loaded
+        //
+        if (!(--_filesLoading)) {
             _onLoadEnd();
         }
     }
@@ -243,14 +248,14 @@
      * @private
      */
     function _onFileLoadTimer() {
-        var time = (new Date()).getTime();
+        var time   = (new Date()).getTime();
         var cl;
 
         for (cl in _loadClasses) {
             if (_loadClasses.hasOwnProperty(cl)) {
                 if (time - _loadClasses[cl] > _config.timeout) {
                     clearInterval(_loadTimerId);
-                    throw new Error('During the dependency loading, file ' + cl + ' haven\'t loaded with timeout ' + _config.timeout + 'ms');
+                    throw new Error('During the dependency loading, file ' + cl + ' hasn\'t loaded within timeout ' + _config.timeout + 'ms');
                 }
             }
         }
@@ -694,9 +699,9 @@
          *     cl1.prop;     // 'newProp'
          *     cl1.method(); // undefined
          *
-         * @param {String|Function|undefined} child        Name of the child class or it's function
-         * @param {Object|undefined=}         props        Class configuration. A map of properties and methods of this class.
-         * @return {Function|undefined} Function if parent class was already loaded, undefined if not
+         * @param {String}    child Name of the child class or it's function
+         * @param {Object=}   props Class configuration. A map of properties and methods of this class.
+         * @return {Function} Function if parent class was already loaded, undefined if not
          */
         define: function define(child, props) {
             props          = props || {};
