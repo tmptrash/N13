@@ -66,6 +66,12 @@
         }())
     };
     /**
+     * {RegExp} RegExp for class namespace. e.g. "App.view.Grid". Pattern: "Uppercase.lowercase.UpperCase" or
+     * "Uppercase"
+     * @private
+     */
+    var _nsRe         = /^([A-Z][A-Za-z0-9]*)(((\.[a-z][A-Za-z0-9]*)*\.[A-Z][A-Za-z0-9]*)?|(\.[A-Z][A-Za-z0-9]*)?)$/;
+    /**
      * {Number} Amount of files, which are loading at the moment. Loading process should be started by N13.create()
      * function. This amount will be set into the amount of required files and will be decreased to zero. Zero means
      * that all dependencies has loaded and we can create full classes.
@@ -335,7 +341,7 @@
          * @property
          * {String} Version in format Major.Minor
          */
-        version: '0.10',
+        version: '0.2',
         /**
          * {Function} Just empty function. We don't need to create new functions all the time.
          * We should use one function instead.
@@ -704,6 +710,13 @@
          * @return {Function} Function if parent class was already loaded, undefined if not
          */
         define: function define(child, props) {
+            if (!_nsRe.test(child)) {
+                throw new Error('Invalid class name "' + child + '" in N13.define() method. Pattern: "UpperCase.lowercase.UpperCase".');
+            }
+            if (props !== undefined && !N13.isObject(props)) {
+                throw new Error('Invalid prototype argument in N13.define() method. Object is required.');
+            }
+
             props          = props || {};
             var emptyClass = function emptyClass() {};
             var parent     = props.extend || emptyClass;
@@ -1137,10 +1150,10 @@
                     // It's possible, that mixin or method is(are) undefined
                     //
                     if (!mix) {
-                        throw new Error('Undefined mixin "' + mixin + '" name was specified: In class: ' + this.className);
+                        throw new Error('Invalid mixin "' + mixin + '" in method callMixin() in class "' + this.className + '"');
                     }
                     if (!mix[method]) {
-                        throw new Error('Undefined method "' + method + '" of mixin: "' + mixin + '" was specified');
+                        throw new Error('Invalid method "' + method + '" of mixin: "' + mixin + '" in class "' + this.className + '"');
                     }
                     return mix[method].apply(this, args);
                 };
@@ -1213,6 +1226,10 @@
             childArr = childNs.split('.');
             childStr = childArr.pop();
             childNs  = childArr.join('.');
+
+            if (childStr === '') {
+                throw new Error('Invalid class name "' + childCl + '"');
+            }
 
             //
             // These data will be needed for post inheritance. After all required classes will be loaded.
@@ -1316,6 +1333,9 @@
         create: create = function (cl, finalCb, scope, cfg, beforeCb) {
             var ret = false;
 
+            if (!_nsRe.test(cl)) {
+                throw new Error('Invalid class name "' + cl + '" in N13.create() method. Example: "UpperCase.lowercase.UpperCase".');
+            }
             //
             // If user has called N13.create() more then once synchronously, then we need to call them one by one,
             // later, because this library doesn't support loading of two or more classes at the same time. So, now

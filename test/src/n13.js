@@ -78,6 +78,59 @@ AsyncTestCase("N13 library", {
     },
 
     /*
+     * Checks N13.define() method with incorrect string namespaces
+     */
+    testDefineWithIncorrectNamespaces: function () {
+        assertException('app       - should be with upper case letter at the beginning', function () {define('app');});
+        assertException('1pp       - should be with upper case letter at the beginning', function () {define('1pp');});
+        assertException('_pp       - should be with upper case letter at the beginning', function () {define('_pp');});
+        assertException('.pp       - should be with upper case letter at the beginning', function () {define('.pp');});
+        assertException('.         - should be with upper case letter at the beginning', function () {define('.');});
+        assertException('A*        - should be with upper case letter at the beginning', function () {define('A*');});
+        assertException('Ap-       - should be with upper case letter at the beginning', function () {define('Ap-');});
+        assertException('-         - should be with upper case letter at the beginning', function () {define('-');});
+        assertException('App.      - should be with upper case letter at the beginning', function () {define('App.');});
+        assertException('App.1     - should be ended by upper case class name',          function () {define('App.1');});
+        assertException('App._     - should be ended by upper case class name',          function () {define('App._');});
+        assertException('App..     - should be ended by upper case class name',          function () {define('App..');});
+        assertException('App.&     - should be ended by upper case class name',          function () {define('App.&');});
+        assertException('App..     - should be ended by upper case class name',          function () {define('App..');});
+        assertException('App.v     - should be ended by upper case class name',          function () {define('App.v');});
+        assertException('A.v.c     - should be ended by upper case class name',          function () {define('A.v.c');});
+        assertException('A.v.1     - should be ended by upper case class name',          function () {define('A.v.1');});
+        assertException('A.v.@     - should be ended by upper case class name',          function () {define('A.v.@');});
+        assertException('A.v.G.    - should be ended by upper case class name',          function () {define('A.v.G.');});
+        assertException('A.v.G#    - should be ended by upper case class name',          function () {define('A.v.G#');});
+        assertException('A.v..     - should be ended by upper case class name',          function () {define('A.v..');});
+        assertException('...       - should be ended by upper case class name',          function () {define('...');});
+        assertException('A.v.c.v   - should be ended by upper case class name',          function () {define('A.v.c.v');});
+        assertException('A.v.b.1   - should be ended by upper case class name',          function () {define('A.v.b.1');});
+        assertException('A.v.f.@   - should be ended by upper case class name',          function () {define('A.v.f.@');});
+        assertException('A.v.k.G.  - should be ended by upper case class name',          function () {define('A.v.k.G.');});
+        assertException('A.v.k.G#  - should be ended by upper case class name',          function () {define('A.v.k.G#');});
+        assertException('A.v.l..   - should be ended by upper case class name',          function () {define('A.v.l..');});
+        assertException('....      - should be ended by upper case class name',          function () {define('....');});
+    },
+
+    /*
+     * Checks N13.ns() method with correct string namespaces
+     */
+    testDefineWithCorrectStringNamespaces: function () {
+        assertFunction('A             - is a correct class', define('A'));
+        assertFunction('App           - is a correct class', define('App'));
+        assertFunction('A1            - is a correct class', define('A1'));
+        assertFunction('A1b           - is a correct class', define('A1b'));
+        assertFunction('Ap.Bp         - is a correct class', define('Ap.Bp'));
+        assertFunction('Ap.v.C        - is a correct class', define('Ap.v.C'));
+        assertFunction('Ap.v.C1       - is a correct class', define('Ap.v.C1'));
+        assertFunction('Ap.v.k.C1     - is a correct class', define('Ap.v.k.C1'));
+        assertFunction('Ap.v.k.r.C1   - is a correct class', define('Ap.v.k.r.C1'));
+        assertFunction('Ap.vA.k.r.C1  - is a correct class', define('Ap.vA.k.r.C1'));
+        assertFunction('Ap.v.kG.r.C1  - is a correct class', define('Ap.v.kG.r.C1'));
+        assertFunction('Ap.v.k.rH.C1  - is a correct class', define('Ap.v.k.rH.C1'));
+    },
+
+    /*
      * This test checks simple inheritance of N13 classes. Simple, means two level inheritance:
      * Child extends Parent extends Function
      */
