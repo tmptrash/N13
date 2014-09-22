@@ -904,49 +904,47 @@
                             protoMix[i] = mixinProto = mixinCl.prototype;
 
                             for (m in mixinProto) {
-                                if (mixinProto.hasOwnProperty(m)) {
-                                    mixin = mixinProto[m];
+                                mixin = mixinProto[m];
 
+                                //
+                                // It's possible to apply configuration from mixin. If main class doesn't
+                                // contain properties, which mixin does, then they may be copied into main one
+                                //
+                                if (m === 'configs') {
+                                    configs = properties.configs = properties.configs || {};
                                     //
-                                    // It's possible to apply configuration from mixin. If main class doesn't
-                                    // contain properties, which mixin does, then they may be copied into main one
+                                    // Walks through config properties and apply only unique for main class
                                     //
-                                    if (m === 'configs') {
-                                        configs = properties.configs = properties.configs || {};
+                                    for (cfg in mixin) {
                                         //
-                                        // Walks through config properties and apply only unique for main class
+                                        // Applies config only if main class doesn't contain same config
                                         //
-                                        for (cfg in mixin) {
-                                            //
-                                            // Applies config only if main class doesn't contain same config
-                                            //
-                                            if (mixin.hasOwnProperty(cfg) && configs[cfg] === undefined) {
-                                                configs[cfg] = mixin[cfg];
-                                            }
+                                        if (mixin.hasOwnProperty(cfg) && configs[cfg] === undefined) {
+                                            configs[cfg] = mixin[cfg];
                                         }
-                                        //
-                                        // We should copy mixed method, only in case when main class doesn't contain them
-                                        //
-                                    } else if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init' && m !== 'destroy') {
-                                        if (isFunction(mixin)) {
-                                            //
-                                            // Name of the property, where we store current function name. It will be used in
-                                            // callParent() method, which calls same method from parent class.
-                                            //
-                                            mixin.fn   = m;
-                                            //
-                                            // Important!!! If current class uses mixin with some hierarchy inside and
-                                            // current class has no some method (e.g.: method()) which mixin has,
-                                            // then if later we call callParent() in the method() of current class,
-                                            // super method from mixin will be called. You should understand, that
-                                            // if current class contains this method in superclass, it will not be
-                                            // called.
-                                            //
-                                            mixin.base = mixinBase.hasOwnProperty(m) ? mixinBase : cl.base;
-                                            mixin.cl   = mixinCl.prototype;
-                                        }
-                                        clProto[m] = mixin;
                                     }
+                                    //
+                                    // We should copy mixed method, only in case when main class doesn't contain them
+                                    //
+                                } else if (!clProto.hasOwnProperty(m) && properties[m] === undefined && m !== 'init' && m !== 'destroy') {
+                                    if (isFunction(mixin)) {
+                                        //
+                                        // Name of the property, where we store current function name. It will be used in
+                                        // callParent() method, which calls same method from parent class.
+                                        //
+                                        mixin.fn   = m;
+                                        //
+                                        // Important!!! If current class uses mixin with some hierarchy inside and
+                                        // current class has no some method (e.g.: method()) which mixin has,
+                                        // then if later we call callParent() in the method() of current class,
+                                        // super method from mixin will be called. You should understand, that
+                                        // if current class contains this method in superclass, it will not be
+                                        // called.
+                                        //
+                                        mixin.base = mixinBase.hasOwnProperty(m) ? mixinBase : cl.base;
+                                        mixin.cl   = mixinCl.prototype;
+                                    }
+                                    clProto[m] = mixin;
                                 }
                             }
                         }
