@@ -66,7 +66,7 @@
         }())
     };
     /**
-     * {RegExp} RegExp for class namespace. e.g. "App.view.Grid". Pattern: "Uppercase.lowercase.UpperCase" or
+     * {RegExp} RegExp for class namespace. e.g. "App.view.base.Grid". Pattern: "Uppercase.lowercase.UpperCase" or
      * "Uppercase"
      * @private
      */
@@ -128,6 +128,7 @@
     var isString;
     var isFunction;
     var isArray;
+    var isArguments;
     var isObject;
     var emptyFn;
     var create;
@@ -373,6 +374,15 @@
          */
         isArray: isArray = function isArray(a) {
             return Object.prototype.toString.call(a) === '[object Array]';
+        },
+
+        /**
+         * Returns true, if specified argument is an arguments type
+         * @param {Object} a Argument to check
+         * @return {Boolean}
+         */
+        isArguments: isArguments = function isArguments(a) {
+            return Object.prototype.toString.call(a) === '[object Arguments]';
         },
 
         /**
@@ -932,17 +942,19 @@
                                         // Name of the property, where we store current function name. It will be used in
                                         // callParent() method, which calls same method from parent class.
                                         //
-                                        mixin.fn   = m;
-                                        //
-                                        // Important!!! If current class uses mixin with some hierarchy inside and
-                                        // current class has no some method (e.g.: method()) which mixin has,
-                                        // then if later we call callParent() in the method() of current class,
-                                        // super method from mixin will be called. You should understand, that
-                                        // if current class contains this method in superclass, it will not be
-                                        // called.
-                                        //
-                                        mixin.base = mixinBase.hasOwnProperty(m) ? mixinBase : cl.base;
-                                        mixin.cl   = mixinCl.prototype;
+                                        if (mixin.fn === undefined) {
+                                            mixin.fn = m;
+                                            //
+                                            // Important!!! If current class uses mixin with some hierarchy inside and
+                                            // current class has no some method (e.g.: method()) which mixin has,
+                                            // then if later we call callParent() in the method() of current class,
+                                            // super method from mixin will be called. You should understand, that
+                                            // if current class contains this method in superclass, it will not be
+                                            // called.
+                                            //
+                                            mixin.base = mixinBase.hasOwnProperty(m) ? mixinBase : cl.base;
+                                            mixin.cl = mixinCl.prototype;
+                                        }
                                     }
                                     clProto[m] = mixin;
                                 }
@@ -1137,12 +1149,17 @@
                  */
                 child.prototype.callMixin = function callMixin(mixin, method, args) {
                     //noinspection JSHint
-                    var caller = arguments.callee.caller;
-                    var mix    = caller.cl.mixins[mixin];
+                    var caller  = arguments.callee.caller;
+                    var mix     = caller.cl.mixins[mixin];
 
-                    //noinspection JSHint
-                    method = isString(method) ? method : caller.fn;
+                    //
+                    // In case if method or args is arguments, then converts it to array
+                    //
+                    method = isArguments(method) ? [].slice.call(method) : method;
+                    args   = isArguments(args) ? [].slice.call(args) : args;
+
                     args   = isArray(args) ? args : isArray(method) ? method : [];
+                    method = isString(method) ? method : caller.fn;
 
                     //
                     // It's possible, that mixin or method is(are) undefined
