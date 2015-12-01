@@ -299,7 +299,7 @@ AsyncTestCase("N13 library", {
         assertTrue('Mixins hierarchy calls 1',              child.mixinMethod1() === 'parent mixin method');
         assertTrue('Mixins hierarchy calls 2',              child.mixinMethod2() === 'mixin');
         assertTrue('Mixins hierarchy calls 3',              child.mixinMethod3() === 'mixin');
-        assertTrue('Mixins hierarchy calls 4',              child.mixinMethod4() === 'parent');
+        assertTrue('Mixins hierarchy calls 4',              child.mixinMethod4() === undefined);
         assertTrue('Mixins should not copy destroy method', !child.hasOwnProperty('destroy') && !Child.prototype.hasOwnProperty('destroy'));
         assertTrue('Mixins should apply its configuration', Child.prototype.cfg1 === '1child' && Child.prototype.cfg2 === '2mix');
     },

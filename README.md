@@ -56,7 +56,7 @@ N13.define('App.Bass', {
     }
 });
 
-> var drum = new App.Drum;
+> var drum = new App.Bass;
 > drum.getTitle();             // Shows 'drum & bass'
 ```
 

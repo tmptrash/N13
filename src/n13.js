@@ -432,6 +432,10 @@
             obj   = global;
             nsArr = namespace.split('.');
             if (nsArr.length === 1 && createFn) {
+                //
+                // Empty class (function) should be created many times.
+                // Don't change it to N13.emptyFn.
+                //
                 item = obj[nsArr[0]] = function emptyClass() {};
 
                 return item;
@@ -1115,7 +1119,7 @@
                             //noinspection JSHint
                             return caller.base[caller.fn].apply(this, args);
                         } else {
-                            parent = caller.base.parent && caller.base.parent.init || caller.base.constructor;
+                            parent = caller.fn && caller.base.parent || caller.base.parent && caller.base.parent.init || caller.base.constructor;
                             if (parent) {
                                 return parent.apply(this, args);
                             }
